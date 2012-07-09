@@ -27,25 +27,6 @@
 
 @interface STRCaptureViewController : UIViewController {
     
-    id delegate;
-    BOOL isRecording;
-    
-    // Preferences
-    //STRUserPreferencesManager * preferencesManager;
-    
-    // Location support
-    CLLocationManager * locationManager;
-    STRGeoLocationData * geoLocationData;
-    
-    // Camera capture support
-    STRCaptureDataCollector * captureDataCollector;
-    AVCaptureVideoPreviewLayer * capturePreviewLayer;
-    IBOutlet UIView * videoPreviewLayer;
-    
-    // General capture support
-    double mediaStartTime;
-    UIDeviceOrientation currentOrientation;
-    
 }
 
 /**
@@ -54,6 +35,8 @@
  The delegate of a STRCaptureViewController should implement a [STRCaptureViewControllerDelegate].
  */
 @property(strong)id delegate;
+
++(STRCaptureViewController *)captureManager;
 
 /**
  Called to handle rotation events without updating UIInterfaceOrientation

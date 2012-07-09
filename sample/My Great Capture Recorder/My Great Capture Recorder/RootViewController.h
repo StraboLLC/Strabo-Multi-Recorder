@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "STRCaptureViewController.h"
+
+@interface RootViewController : UIViewController
 
 @end

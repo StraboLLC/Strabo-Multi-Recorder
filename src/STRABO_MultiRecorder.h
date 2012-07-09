@@ -10,6 +10,4 @@
 
 @interface STRABO_MultiRecorder : NSObject
 
-
-
 @end

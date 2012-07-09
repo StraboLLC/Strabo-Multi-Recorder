@@ -6,18 +6,24 @@
 //  Copyright (c) 2012 Strabo, LLC. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 
-@interface ViewController ()
+@interface RootViewController ()
 
 @end
 
-@implementation ViewController
+@implementation RootViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    STRCaptureViewController * firstvc = [STRCaptureViewController captureManager];
+    
+    [self presentViewController:firstvc animated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
