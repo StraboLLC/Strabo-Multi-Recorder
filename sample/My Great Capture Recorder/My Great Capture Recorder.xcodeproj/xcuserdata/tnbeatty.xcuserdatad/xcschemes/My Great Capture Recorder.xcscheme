@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "963828D615A3837C00E7952F"
-               BuildableName = "strabo-multi-recorder.app"
-               BlueprintName = "strabo-multi-recorder"
-               ReferencedContainer = "container:strabo-multi-recorder.xcodeproj">
+               BlueprintIdentifier = "9629ABAB15AB45BF004FB443"
+               BuildableName = "My Great Capture Recorder.app"
+               BlueprintName = "My Great Capture Recorder"
+               ReferencedContainer = "container:My Great Capture Recorder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "963828D615A3837C00E7952F"
-            BuildableName = "strabo-multi-recorder.app"
-            BlueprintName = "strabo-multi-recorder"
-            ReferencedContainer = "container:strabo-multi-recorder.xcodeproj">
+            BlueprintIdentifier = "9629ABAB15AB45BF004FB443"
+            BuildableName = "My Great Capture Recorder.app"
+            BlueprintName = "My Great Capture Recorder"
+            ReferencedContainer = "container:My Great Capture Recorder.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "963828D615A3837C00E7952F"
-            BuildableName = "strabo-multi-recorder.app"
-            BlueprintName = "strabo-multi-recorder"
-            ReferencedContainer = "container:strabo-multi-recorder.xcodeproj">
+            BlueprintIdentifier = "9629ABAB15AB45BF004FB443"
+            BuildableName = "My Great Capture Recorder.app"
+            BlueprintName = "My Great Capture Recorder"
+            ReferencedContainer = "container:My Great Capture Recorder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "963828D615A3837C00E7952F"
-            BuildableName = "strabo-multi-recorder.app"
-            BlueprintName = "strabo-multi-recorder"
-            ReferencedContainer = "container:strabo-multi-recorder.xcodeproj">
+            BlueprintIdentifier = "9629ABAB15AB45BF004FB443"
+            BuildableName = "My Great Capture Recorder.app"
+            BlueprintName = "My Great Capture Recorder"
+            ReferencedContainer = "container:My Great Capture Recorder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

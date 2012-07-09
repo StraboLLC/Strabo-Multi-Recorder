@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>strabo-multi-recorder.xcscheme</key>
+		<key>My Great Capture Recorder.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>963828D615A3837C00E7952F</key>
+		<key>9629ABAB15AB45BF004FB443</key>
 		<dict>
 			<key>primary</key>
 			<true/>

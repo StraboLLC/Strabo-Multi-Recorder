@@ -1,18 +1,18 @@
 //
-//  STRViewController.m
-//  strabo-multi-recorder
+//  ViewController.m
+//  My Great Capture Recorder
 //
-//  Created by Thomas N Beatty on 7/3/12.
+//  Created by Thomas N Beatty on 7/9/12.
 //  Copyright (c) 2012 Strabo, LLC. All rights reserved.
 //
 
-#import "STRViewController.h"
+#import "ViewController.h"
 
-@interface STRViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation STRViewController
+@implementation ViewController
 
 - (void)viewDidLoad
 {

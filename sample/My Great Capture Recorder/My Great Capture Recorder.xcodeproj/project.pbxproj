@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9629ABB115AB45BF004FB443 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABB015AB45BF004FB443 /* UIKit.framework */; };
+		9629ABB315AB45BF004FB443 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABB215AB45BF004FB443 /* Foundation.framework */; };
+		9629ABB515AB45BF004FB443 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABB415AB45BF004FB443 /* CoreGraphics.framework */; };
+		9629ABBB15AB45BF004FB443 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9629ABB915AB45BF004FB443 /* InfoPlist.strings */; };
+		9629ABBD15AB45BF004FB443 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629ABBC15AB45BF004FB443 /* main.m */; };
+		9629ABC115AB45BF004FB443 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629ABC015AB45BF004FB443 /* AppDelegate.m */; };
+		9629ABC415AB45BF004FB443 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9629ABC215AB45BF004FB443 /* MainStoryboard.storyboard */; };
+		9629ABC715AB45C0004FB443 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629ABC615AB45C0004FB443 /* ViewController.m */; };
+		9629ABD315AB45D6004FB443 /* libSTRABO-MultiRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABCE15AB45D6004FB443 /* libSTRABO-MultiRecorder.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9629ABAC15AB45BF004FB443 /* My Great Capture Recorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Great Capture Recorder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9629ABB015AB45BF004FB443 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9629ABB215AB45BF004FB443 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9629ABB415AB45BF004FB443 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9629ABB815AB45BF004FB443 /* My Great Capture Recorder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "My Great Capture Recorder-Info.plist"; sourceTree = "<group>"; };
+		9629ABBA15AB45BF004FB443 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9629ABBC15AB45BF004FB443 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9629ABBE15AB45BF004FB443 /* My Great Capture Recorder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My Great Capture Recorder-Prefix.pch"; sourceTree = "<group>"; };
+		9629ABBF15AB45BF004FB443 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9629ABC015AB45BF004FB443 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9629ABC315AB45BF004FB443 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9629ABC515AB45BF004FB443 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9629ABC615AB45C0004FB443 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9629ABCE15AB45D6004FB443 /* libSTRABO-MultiRecorder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSTRABO-MultiRecorder.a"; sourceTree = "<group>"; };
+		9629ABCF15AB45D6004FB443 /* STRABO_MultiRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRABO_MultiRecorder.h; sourceTree = "<group>"; };
+		9629ABD015AB45D6004FB443 /* STRCaptureDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureDataCollector.h; sourceTree = "<group>"; };
+		9629ABD115AB45D6004FB443 /* STRCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureViewController.h; sourceTree = "<group>"; };
+		9629ABD215AB45D6004FB443 /* STRGeoLocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRGeoLocationData.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9629ABA915AB45BF004FB443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9629ABB115AB45BF004FB443 /* UIKit.framework in Frameworks */,
+				9629ABB315AB45BF004FB443 /* Foundation.framework in Frameworks */,
+				9629ABB515AB45BF004FB443 /* CoreGraphics.framework in Frameworks */,
+				9629ABD315AB45D6004FB443 /* libSTRABO-MultiRecorder.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9629ABA115AB45BF004FB443 = {
+			isa = PBXGroup;
+			children = (
+				9629ABB615AB45BF004FB443 /* My Great Capture Recorder */,
+				9629ABAF15AB45BF004FB443 /* Frameworks */,
+				9629ABAD15AB45BF004FB443 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9629ABAD15AB45BF004FB443 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9629ABAC15AB45BF004FB443 /* My Great Capture Recorder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9629ABAF15AB45BF004FB443 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9629ABB015AB45BF004FB443 /* UIKit.framework */,
+				9629ABB215AB45BF004FB443 /* Foundation.framework */,
+				9629ABB415AB45BF004FB443 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9629ABB615AB45BF004FB443 /* My Great Capture Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				9629ABCD15AB45D6004FB443 /* src */,
+				9629ABBF15AB45BF004FB443 /* AppDelegate.h */,
+				9629ABC015AB45BF004FB443 /* AppDelegate.m */,
+				9629ABC215AB45BF004FB443 /* MainStoryboard.storyboard */,
+				9629ABC515AB45BF004FB443 /* ViewController.h */,
+				9629ABC615AB45C0004FB443 /* ViewController.m */,
+				9629ABB715AB45BF004FB443 /* Supporting Files */,
+			);
+			path = "My Great Capture Recorder";
+			sourceTree = "<group>";
+		};
+		9629ABB715AB45BF004FB443 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9629ABB815AB45BF004FB443 /* My Great Capture Recorder-Info.plist */,
+				9629ABB915AB45BF004FB443 /* InfoPlist.strings */,
+				9629ABBC15AB45BF004FB443 /* main.m */,
+				9629ABBE15AB45BF004FB443 /* My Great Capture Recorder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9629ABCD15AB45D6004FB443 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9629ABCE15AB45D6004FB443 /* libSTRABO-MultiRecorder.a */,
+				9629ABCF15AB45D6004FB443 /* STRABO_MultiRecorder.h */,
+				9629ABD015AB45D6004FB443 /* STRCaptureDataCollector.h */,
+				9629ABD115AB45D6004FB443 /* STRCaptureViewController.h */,
+				9629ABD215AB45D6004FB443 /* STRGeoLocationData.h */,
+			);
+			name = src;
+			path = ../../../src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9629ABAB15AB45BF004FB443 /* My Great Capture Recorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9629ABCA15AB45C0004FB443 /* Build configuration list for PBXNativeTarget "My Great Capture Recorder" */;
+			buildPhases = (
+				9629ABA815AB45BF004FB443 /* Sources */,
+				9629ABA915AB45BF004FB443 /* Frameworks */,
+				9629ABAA15AB45BF004FB443 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My Great Capture Recorder";
+			productName = "My Great Capture Recorder";
+			productReference = 9629ABAC15AB45BF004FB443 /* My Great Capture Recorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9629ABA315AB45BF004FB443 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Strabo, LLC";
+			};
+			buildConfigurationList = 9629ABA615AB45BF004FB443 /* Build configuration list for PBXProject "My Great Capture Recorder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9629ABA115AB45BF004FB443;
+			productRefGroup = 9629ABAD15AB45BF004FB443 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9629ABAB15AB45BF004FB443 /* My Great Capture Recorder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9629ABAA15AB45BF004FB443 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9629ABBB15AB45BF004FB443 /* InfoPlist.strings in Resources */,
+				9629ABC415AB45BF004FB443 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9629ABA815AB45BF004FB443 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9629ABBD15AB45BF004FB443 /* main.m in Sources */,
+				9629ABC115AB45BF004FB443 /* AppDelegate.m in Sources */,
+				9629ABC715AB45C0004FB443 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9629ABB915AB45BF004FB443 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9629ABBA15AB45BF004FB443 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9629ABC215AB45BF004FB443 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9629ABC315AB45BF004FB443 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9629ABC815AB45C0004FB443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9629ABC915AB45C0004FB443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9629ABCB15AB45C0004FB443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "My Great Capture Recorder/My Great Capture Recorder-Prefix.pch";
+				INFOPLIST_FILE = "My Great Capture Recorder/My Great Capture Recorder-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../src\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9629ABCC15AB45C0004FB443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "My Great Capture Recorder/My Great Capture Recorder-Prefix.pch";
+				INFOPLIST_FILE = "My Great Capture Recorder/My Great Capture Recorder-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../src\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9629ABA615AB45BF004FB443 /* Build configuration list for PBXProject "My Great Capture Recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9629ABC815AB45C0004FB443 /* Debug */,
+				9629ABC915AB45C0004FB443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9629ABCA15AB45C0004FB443 /* Build configuration list for PBXNativeTarget "My Great Capture Recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9629ABCB15AB45C0004FB443 /* Debug */,
+				9629ABCC15AB45C0004FB443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9629ABA315AB45BF004FB443 /* Project object */;
+}

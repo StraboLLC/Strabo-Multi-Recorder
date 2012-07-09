@@ -1,14 +1,14 @@
 //
-//  STRAppDelegate.m
-//  strabo-multi-recorder
+//  AppDelegate.m
+//  My Great Capture Recorder
 //
-//  Created by Thomas N Beatty on 7/3/12.
+//  Created by Thomas N Beatty on 7/9/12.
 //  Copyright (c) 2012 Strabo, LLC. All rights reserved.
 //
 
-#import "STRAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation STRAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
