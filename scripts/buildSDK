@@ -1,7 +1,8 @@
 #!/bin/bash
 
-A_ORIGIN=/Users/tnbeatty/Library/Developer/Xcode/DerivedData/STRABO-MultiRecorder-gcgqgkhpyagxhhfkdtquledulqjc/Build/Products/Debug-iphoneos/libSTRABO-MultiRecorder.a
+A_ORIGIN=/Users/tnbeatty/Library/Developer/Xcode/DerivedData/STRABO-MultiRecorder-atazknvorqlvcrazmbjwhsfuqotp/Build/Products/Debug-iphoneos/libSTRABO-MultiRecorder.a
 H_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.h
+M_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.m
 STORYBOARD_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRMultiRecorderStoryboard.storyboard
 SOURCE=../src
 
@@ -15,10 +16,12 @@ echo "
 
 # Copy .h and storyboard files to the src folder
 
-#cp $A_ORIGIN $SOURCE
-echo "WARNING | Please copy the .a file manually to the following location: " $SOURCE
+cp $A_ORIGIN $SOURCE
+echo "WARNING | Please make sure that the .a file origin location is accurate."
+echo "File location, .a: " $A_ORIGIN
 
 cp $H_ORIGIN $SOURCE
+# cp $M_ORIGIN $SOURCE
 cp $STORYBOARD_ORIGIN $SOURCE
 
 echo "INFO | All .h and .storyboard files coppied to the source folder."
@@ -30,7 +33,7 @@ DOCS_DEST=../docs
 
 cp -r $DOCS_ORIGIN $DOCS_DEST
 
-echo "INFO | Documentation coppied to DOCS folder."
+echo "INFO | Documentation copied to DOCS folder."
 
 # Include a blank line at the end of the process.
 echo ""

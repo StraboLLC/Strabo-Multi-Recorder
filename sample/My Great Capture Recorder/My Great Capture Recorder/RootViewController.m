@@ -8,7 +8,9 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController ()
+@interface RootViewController (STRCaptureViewControllerDelegate) <STRCaptureViewControllerDelegate>
+
+-(void)parentShouldDismissCaptureViewController:(UIViewController *)sender;
 
 @end
 
@@ -22,7 +24,7 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     STRCaptureViewController * firstvc = [STRCaptureViewController captureManager];
-    
+    firstvc.delegate = self;
     [self presentViewController:firstvc animated:NO completion:nil];
 }
 
@@ -35,6 +37,14 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+@end
+
+@implementation RootViewController (STRCaptureViewControllerDelegate)
+
+-(void)parentShouldDismissCaptureViewController:(UIViewController *)sender {
+    [sender dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

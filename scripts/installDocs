@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+# Copies the documentation in the repo to the xcode library
+# so that it can be viewed in the xcode organizer
+
+def installDocumentation
+  return system 'cp -r ../docs/com.strabogis.STRABO-MultiRecorder.docset ~/Library/Developer/Shared/Documentation/DocSets'
+end
+
+puts "\n *** MULTIRECORDER | STRABO, LLC *** \n"
+puts "\nINFO | Preparing to install documentation to Xcode"
+
+if installDocumentation
+  puts "INFO | Documentation installation successful"
+else
+  puts "ERROR | There was a problem installing your documentation."
+  puts "Please copy by hand from the /docs directory"
+  puts "Or contact the Strabo team at support@strabogis.com"
+end
+
+puts ""
