@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>STRCapture Class Reference</title>
+		<title>NSString(MD5) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">STRCapture Class Reference</h1>
+				<h1 class="hideInXcode">NSString(MD5) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -40,16 +40,11 @@
 	
 	
 	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/createCaptureFromFilesAtDirectory:">&nbsp;&nbsp;&nbsp;&nbsp;+ createCaptureFromFilesAtDirectory:</option>
-	
-	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/save">&nbsp;&nbsp;&nbsp;&nbsp;- save</option>
+	<option value="//api/name/MD5">&nbsp;&nbsp;&nbsp;&nbsp;- MD5</option>
 	
 	
 	
@@ -67,10 +62,6 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Class Methods">Class Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Editing Methods">Editing Methods</a></span></li>
-	
 </ul></li>
 
 
@@ -78,18 +69,12 @@
 
 
 
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createCaptureFromFilesAtDirectory:">createCaptureFromFilesAtDirectory:</a></span></li>
-	
-</ul></li>
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save">save</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5">MD5</a></span></li>
 	
 </ul></li>
 
@@ -98,7 +83,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="STRCapture Class Reference" name="top"></a>
+				<a title="NSString(MD5) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -107,18 +92,15 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">STRCapture Class Reference</h1>
+						<h1 class="title title-header">NSString(MD5) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">STRCapture.h</td>
+	<td class="specification-value">NSString+MD5.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -128,11 +110,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Holds all of the information about a capture taken with the Strabo MultiRecorder.</p>
-
-<h2>Creating a Capture object</h2>
-
-<h2>Editing a Capture object</h2>
+						<p>Extends NSString with a function to produce a string hashed with the <a href="#//api/name/MD5">MD5</a> algorithm.</p>
 					</div>
 					
 					
@@ -144,29 +122,14 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="Class Methods" name="task_Class Methods"></a>
-						<h3 class="subsubtitle task-title">Class Methods</h3>
+						
+						
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/createCaptureFromFilesAtDirectory:">+&nbsp;createCaptureFromFilesAtDirectory:</a></code>
-		<span class="tooltip"><p>Returns a new STRCapture object with the files at the directory specified.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Editing Methods" name="task_Editing Methods"></a>
-						<h3 class="subsubtitle task-title">Editing Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/save">&ndash;&nbsp;save</a></code>
-		<span class="tooltip"><p>Saves changes made to the capture object since it was created.</p></span>
+		<code><a href="#//api/name/MD5">&ndash;&nbsp;MD5</a></code>
+		<span class="tooltip"><p>Hashes a given string with the MD5 algorithm.</p></span>
 	</span>
 	
 	
@@ -180,65 +143,6 @@
 					
 					
 					
-					
-					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/createCaptureFromFilesAtDirectory:" title="createCaptureFromFilesAtDirectory:"></a>
-	<h3 class="subsubtitle method-title">createCaptureFromFilesAtDirectory:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns a new STRCapture object with the files at the directory specified.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>+ (STRCapture *)createCaptureFromFilesAtDirectory:(NSString *)<em>captureDirectory</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>captureDirectory</em></dt>
-			<dd><p>The name of the directory containing the capture media files.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns a new STRCapture object with the files at the directory specified.</p>
-
-<p>Notice that the capture directory is not the absolute path to the directory, but is rather the name of the directory containing the capture media files. For example, under the naming scheme as of July, 2012, the capture directory could be something like: @&ldquo;1342193443&rdquo;.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRCapture.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
 					
 					
 					
@@ -247,18 +151,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/save" title="save"></a>
-	<h3 class="subsubtitle method-title">save</h3>
+	<a name="//api/name/MD5" title="MD5"></a>
+	<h3 class="subsubtitle method-title">MD5</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Saves changes made to the capture object since it was created.</p>
+		<p>Hashes a given string with the MD5 algorithm.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)save</code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)MD5</code></div>
 
     
 	
@@ -270,7 +174,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Saves changes made to the capture object since it was created.</p>
+		<p>Hashes a given string with the MD5 algorithm.</p>
 	</div>
 	
 	
@@ -281,7 +185,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRCapture.h</code><br />
+		<code class="declared-in-ref">NSString+MD5.h</code><br />
 	</div>				
 	
 	
