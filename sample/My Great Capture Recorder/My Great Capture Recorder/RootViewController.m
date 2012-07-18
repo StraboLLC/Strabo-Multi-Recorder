@@ -8,6 +8,12 @@
 
 #import "RootViewController.h"
 
+@interface RootViewController (InternalMethods)
+
+-(void)presentCameraViewController;
+
+@end
+
 @interface RootViewController (STRCaptureViewControllerDelegate) <STRCaptureViewControllerDelegate>
 
 -(void)parentShouldDismissCaptureViewController:(UIViewController *)sender;
@@ -16,16 +22,12 @@
 
 @implementation RootViewController
 
+#pragma mark - View Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
--(void)viewDidAppear:(BOOL)animated {
-    STRCaptureViewController * firstvc = [STRCaptureViewController captureManager];
-    firstvc.delegate = self;
-    [self presentViewController:firstvc animated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,12 +41,34 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - Button Handling
+
+-(IBAction)cameraButtonWasPressed:(id)sender {
+    NSLog(@"Camera button was pressed. Now displaying camera view.");
+    [self presentCameraViewController];
+}
+
+-(IBAction)listButtonWasPressed:(id)sender {
+    NSLog(@"List button was pressed. Now displaying list view.");
+    
+}
+
 @end
 
 @implementation RootViewController (STRCaptureViewControllerDelegate)
 
 -(void)parentShouldDismissCaptureViewController:(UIViewController *)sender {
     [sender dismissViewControllerAnimated:YES completion:nil];
+}
+
+@end
+
+@implementation RootViewController (InternalMethods)
+
+-(void)presentCameraViewController {
+    STRCaptureViewController * cameraVC = [STRCaptureViewController captureManager];
+    cameraVC.delegate = self;
+    [self presentViewController:cameraVC animated:YES completion:nil];
 }
 
 @end

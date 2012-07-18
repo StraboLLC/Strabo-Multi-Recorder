@@ -13,7 +13,7 @@
  
  Includes unixTimestampString and unixTimestampNumber as two options for obtaining the unix time either as an NSString or as an NSNumber.
  */
-@interface NSDate (Unix_Timestamp_Tools)
+@interface NSDate (Date_Utilities)
 
 +(NSString *)currentUnixTimestampString;
 +(NSNumber *)currentUnixTimestampNumber;

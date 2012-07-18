@@ -38,11 +38,34 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/creationDate">&nbsp;&nbsp;&nbsp;&nbsp;creationDate</option>
+	
+	<option value="//api/name/geoDataURL">&nbsp;&nbsp;&nbsp;&nbsp;geoDataURL</option>
+	
+	<option value="//api/name/latitude">&nbsp;&nbsp;&nbsp;&nbsp;latitude</option>
+	
+	<option value="//api/name/longitude">&nbsp;&nbsp;&nbsp;&nbsp;longitude</option>
+	
+	<option value="//api/name/mediaURL">&nbsp;&nbsp;&nbsp;&nbsp;mediaURL</option>
+	
+	<option value="//api/name/thumbnailURL">&nbsp;&nbsp;&nbsp;&nbsp;thumbnailURL</option>
+	
+	<option value="//api/name/title">&nbsp;&nbsp;&nbsp;&nbsp;title</option>
+	
+	<option value="//api/name/token">&nbsp;&nbsp;&nbsp;&nbsp;token</option>
+	
+	<option value="//api/name/type">&nbsp;&nbsp;&nbsp;&nbsp;type</option>
+	
+	<option value="//api/name/uploadDate">&nbsp;&nbsp;&nbsp;&nbsp;uploadDate</option>
+	
+	
 	
 	
 	<option value="class_methods">Class Methods</option>
 	
-	<option value="//api/name/createCaptureFromFilesAtDirectory:">&nbsp;&nbsp;&nbsp;&nbsp;+ createCaptureFromFilesAtDirectory:</option>
+	<option value="//api/name/captureFromFilesAtDirectory:">&nbsp;&nbsp;&nbsp;&nbsp;+ captureFromFilesAtDirectory:</option>
 	
 	
 	
@@ -67,6 +90,14 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Geodata">Geodata</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Associated Files">Associated Files</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Capture Info">Capture Info</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Readwrite Properties">Readwrite Properties</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Class Methods">Class Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Editing Methods">Editing Methods</a></span></li>
@@ -77,11 +108,35 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/creationDate">creationDate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/geoDataURL">geoDataURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/latitude">latitude</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/longitude">longitude</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mediaURL">mediaURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/thumbnailURL">thumbnailURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/title">title</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/token">token</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/type">type</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/uploadDate">uploadDate</a></span></li>
+	
+</ul></li>
+
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createCaptureFromFilesAtDirectory:">createCaptureFromFilesAtDirectory:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/captureFromFilesAtDirectory:">captureFromFilesAtDirectory:</a></span></li>
 	
 </ul></li>
 
@@ -130,9 +185,9 @@
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>Holds all of the information about a capture taken with the Strabo MultiRecorder.</p>
 
-<h2>Creating a Capture object</h2>
+<p>Creating a Capture object</p>
 
-<h2>Editing a Capture object</h2>
+<p>Editing a Capture object</p>
 					</div>
 					
 					
@@ -144,13 +199,115 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
+						<a title="Geodata" name="task_Geodata"></a>
+						<h3 class="subsubtitle task-title">Geodata</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/creationDate">&nbsp;&nbsp;creationDate</a></code>
+		<span class="tooltip"><p>Date when the capture was first taken.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/latitude">&nbsp;&nbsp;latitude</a></code>
+		<span class="tooltip"><p>Initial latitude of the capture.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/longitude">&nbsp;&nbsp;longitude</a></code>
+		<span class="tooltip"><p>Initial longitude of the capture.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Associated Files" name="task_Associated Files"></a>
+						<h3 class="subsubtitle task-title">Associated Files</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/geoDataURL">&nbsp;&nbsp;geoDataURL</a></code>
+		<span class="tooltip"><p>URL of the geo data file associated with this capture.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mediaURL">&nbsp;&nbsp;mediaURL</a></code>
+		<span class="tooltip"><p>URL of the media file associated with this capture.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/thumbnailURL">&nbsp;&nbsp;thumbnailURL</a></code>
+		<span class="tooltip"><p>URL of the thumbnail image that represents this capture.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Capture Info" name="task_Capture Info"></a>
+						<h3 class="subsubtitle task-title">Capture Info</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/token">&nbsp;&nbsp;token</a></code>
+		<span class="tooltip"><p>Unique token that represents the track.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+		<span class="tooltip"><p>Specifies the capture type: either video or image.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Readwrite Properties" name="task_Readwrite Properties"></a>
+						<h3 class="subsubtitle task-title">Readwrite Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/title">&nbsp;&nbsp;title</a></code>
+		<span class="tooltip"><p>The title of the track, which can be defined by the user.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/uploadDate">&nbsp;&nbsp;uploadDate</a></code>
+		<span class="tooltip"><p>The date that the track was uploaded.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
 						<a title="Class Methods" name="task_Class Methods"></a>
 						<h3 class="subsubtitle task-title">Class Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/createCaptureFromFilesAtDirectory:">+&nbsp;createCaptureFromFilesAtDirectory:</a></code>
+		<code><a href="#//api/name/captureFromFilesAtDirectory:">+&nbsp;captureFromFilesAtDirectory:</a></code>
 		<span class="tooltip"><p>Returns a new STRCapture object with the files at the directory specified.</p></span>
 	</span>
 	
@@ -179,6 +336,434 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/creationDate" title="creationDate"></a>
+	<h3 class="subsubtitle method-title">creationDate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Date when the capture was first taken.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSDate *creationDate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Date when the capture was first taken.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/geoDataURL" title="geoDataURL"></a>
+	<h3 class="subsubtitle method-title">geoDataURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>URL of the geo data file associated with this capture.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSURL *geoDataURL</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>URL of the geo data file associated with this capture.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/latitude" title="latitude"></a>
+	<h3 class="subsubtitle method-title">latitude</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initial latitude of the capture.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSNumber *latitude</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initial latitude of the capture.</p><div class="warning"><p><strong>Warning:</strong> This value might not equate exactly to the first point in the geo-data file.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/longitude" title="longitude"></a>
+	<h3 class="subsubtitle method-title">longitude</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initial longitude of the capture.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSNumber *longitude</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initial longitude of the capture.</p><div class="warning"><p><strong>Warning:</strong> This value might not equate exactly to the first point in the geo-data file.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mediaURL" title="mediaURL"></a>
+	<h3 class="subsubtitle method-title">mediaURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>URL of the media file associated with this capture.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSURL *mediaURL</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>URL of the media file associated with this capture.</p>
+
+<p>The media file could either be a video (mov) or an image (jpg) file.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/thumbnailURL" title="thumbnailURL"></a>
+	<h3 class="subsubtitle method-title">thumbnailURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>URL of the thumbnail image that represents this capture.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSURL *thumbnailURL</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>URL of the thumbnail image that represents this capture.</p>
+
+<p>It is always a small JPG image file.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/title" title="title"></a>
+	<h3 class="subsubtitle method-title">title</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The title of the track, which can be defined by the user.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *title</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The title of the track, which can be defined by the user.</p>
+
+<p>&ldquo;Untitled Capture&rdquo; is the default value for this property. If you wish to reset the title of a capture, change this property and then commit your changes by calling the <a href="#//api/name/save">save</a> method.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/token" title="token"></a>
+	<h3 class="subsubtitle method-title">token</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Unique token that represents the track.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSString *token</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Unique token that represents the track.</p>
+
+<p>The token is generated from a combination of an identifier unique to each application installation and the date, so it is unique to each capture.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="subsubtitle method-title">type</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies the capture type: either video or image.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSString *type</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specifies the capture type: either video or image.</p>
+
+<p>A string with value either @&ldquo;video&rdquo; or @&ldquo;image&rdquo;.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/uploadDate" title="uploadDate"></a>
+	<h3 class="subsubtitle method-title">uploadDate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The date that the track was uploaded.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSDate *uploadDate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The date that the track was uploaded.</p>
+
+<p>Set to nil by default, but can be changed so that you can keep track of if and when tracks are uploaded to the server. Set this property and then use the <a href="#//api/name/save">save</a> method to commit your changes.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 					
 					<div class="section section-methods">
@@ -186,8 +771,8 @@
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/createCaptureFromFilesAtDirectory:" title="createCaptureFromFilesAtDirectory:"></a>
-	<h3 class="subsubtitle method-title">createCaptureFromFilesAtDirectory:</h3>
+	<a name="//api/name/captureFromFilesAtDirectory:" title="captureFromFilesAtDirectory:"></a>
+	<h3 class="subsubtitle method-title">captureFromFilesAtDirectory:</h3>
 	
 	
 	
@@ -197,7 +782,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (STRCapture *)createCaptureFromFilesAtDirectory:(NSString *)<em>captureDirectory</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (STRCapture *)captureFromFilesAtDirectory:(NSString *)<em>captureDirectory</em></code></div>
 
     
 	
@@ -271,6 +856,8 @@
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Saves changes made to the capture object since it was created.</p>
+
+<p>If you want to make any changes to readwrite properties of an STRCapture object, set the values of those properties and then call this method to write those changes to the appropriate files. This will make changes to the properties persistent.</p>
 	</div>
 	
 	
@@ -300,7 +887,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-07-13)</span><br />
+						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-07-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

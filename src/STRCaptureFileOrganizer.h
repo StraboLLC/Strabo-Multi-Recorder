@@ -6,8 +6,17 @@
 //  Copyright (c) 2012 Strabo, LLC. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "NSDate+Unix_Timestamp_Tools.h"
+#import <CoreMedia/CoreMedia.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreLocation/CLLocation.h>
+
+// Tools
+#import "NSDate+Date_Utilities.h"
+#import "NSString+MD5.h"
+
+// The size of the thumbnail output
 
 /**
  See [STRCaptureFileManager] instead.
@@ -22,8 +31,12 @@
 
 /**
  Relocates the most recently captured video files from the temp folder to the documents directory.
+ 
+ In the process of relocating the track files, this method creates a new file, capture-info.json, to store related information about the track. This method uses the parameter, location, to store the location of the track in this file.
+ 
+ @param location The location for the track.
  */
--(void)saveTempVideoFiles;
+-(void)saveTempVideoFilesWithInitialLocation:(CLLocation *)location;
 
 /**
  Relocates the most recently captured image files from the temp folder to the documents directory.

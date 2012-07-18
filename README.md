@@ -1,8 +1,6 @@
-Strabo MultiRecorder
+STRABO-MultiRecorder Source
 ===
 
-Copyright (c) 2012 Strabo, LLC. All rights reserved.
+Proprietary and Confidential (That means you can't talk about it, Will Potter).
 
-See the documentation website for more information about installation.
-
-(The documentation site isn't built yet. tough shit.)
+Created by Nate Beatty | Copyright (c) Strabo, LLC 2012
