@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "STRCaptureViewController.h"
+#import "multi-recorder-sdk.h"
 
 @interface RootViewController : UIViewController
 

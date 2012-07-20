@@ -36,6 +36,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -50,7 +54,10 @@
 
 -(IBAction)listButtonWasPressed:(id)sender {
     NSLog(@"List button was pressed. Now displaying list view.");
-    
+    STRCaptureUploadManager * uploadManger = [STRCaptureUploadManager defaultManager];
+    STRCaptureFileManager * fileManager = [STRCaptureFileManager defaultManager];
+    STRCapture * capture = [[fileManager allCapturesSorted:NO] objectAtIndex:0];
+    [uploadManger beginUploadForCapture:capture];
 }
 
 @end

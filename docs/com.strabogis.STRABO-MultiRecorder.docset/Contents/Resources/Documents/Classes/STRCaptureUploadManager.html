@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>STRCaptureViewController Class Reference</title>
+		<title>STRCaptureUploadManager Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">STRCaptureViewController Class Reference</h1>
+				<h1 class="hideInXcode">STRCaptureUploadManager Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -47,18 +47,16 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
-	<option value="//api/name/captureManager">&nbsp;&nbsp;&nbsp;&nbsp;+ captureManager</option>
+	<option value="//api/name/defaultManager">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultManager</option>
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/deviceDidRotate">&nbsp;&nbsp;&nbsp;&nbsp;- deviceDidRotate</option>
+	<option value="//api/name/beginUploadForCapture:">&nbsp;&nbsp;&nbsp;&nbsp;- beginUploadForCapture:</option>
 	
-	<option value="//api/name/doneButtonWasPressed:">&nbsp;&nbsp;&nbsp;&nbsp;- doneButtonWasPressed:</option>
-	
-	<option value="//api/name/recordButtonWasPressed:">&nbsp;&nbsp;&nbsp;&nbsp;- recordButtonWasPressed:</option>
+	<option value="//api/name/cancelCurrentUpload">&nbsp;&nbsp;&nbsp;&nbsp;- cancelCurrentUpload</option>
 	
 	
 	
@@ -76,8 +74,6 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Button Handling">Button Handling</a></span></li>
-	
 </ul></li>
 
 
@@ -94,7 +90,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/captureManager">captureManager</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultManager">defaultManager</a></span></li>
 	
 </ul></li>
 
@@ -102,11 +98,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceDidRotate">deviceDidRotate</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beginUploadForCapture:">beginUploadForCapture:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/doneButtonWasPressed:">doneButtonWasPressed:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recordButtonWasPressed:">recordButtonWasPressed:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelCurrentUpload">cancelCurrentUpload</a></span></li>
 	
 </ul></li>
 
@@ -115,7 +109,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="STRCaptureViewController Class Reference" name="top"></a>
+				<a title="STRCaptureUploadManager Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -124,7 +118,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">STRCaptureViewController Class Reference</h1>
+						<h1 class="title title-header">STRCaptureUploadManager Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -132,10 +126,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UIViewController</td>
+	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">STRCaptureViewController.h</td>
+	<td class="specification-value">STRCaptureUploadManager.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -145,9 +139,20 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A view controller which handles capturing of video and images.</p>
+						<p>An object to help you manage file uploads to the Strabo servers.</p>
 
-<p>This view controller should be instantiated with the <a href="#//api/name/captureManager">captureManager</a> class method and then presented modally.</p>
+<p>For a more detailed tutorial about uploading captures and handling upload information, see also the <a href="../docs/help/WorkingWithTheSDK.html">Working with the SDK</a> reference.</p>
+
+<p>To upload a capture, create a new instance of a STRCaptureUploadManager by using the defaultManager class method:</p>
+
+<pre><code>STRCaptureUploadManager * captureUploadManager = [STRCaptureUploadManager defaultManager];
+</code></pre>
+
+<p>Pass a [STRCapture] object to the <a href="#//api/name/beginUploadForCapture:">beginUploadForCapture:</a> method and the STRCaptureUploadManager will handle the rest of the steps necessary to finish the upload to the Strabo servers.</p>
+
+<p>To cancel and upload in progress, call the <a href="#//api/name/cancelCurrentUpload">cancelCurrentUpload</a> method.</p>
+
+<p>Although all of the [STRCaptureUploadManagerDelegate] methods are optional, it is HIGHLY RECOMMENDED that the object that implements a STRCaptureUploadManager also conform to the [STRCaptureUploadManagerDelegate]. The the associated documentation or the <a href="../docs/help/WorkingWithTheSDK.html">Working with the SDK</a> guide for more information.</p>
 					</div>
 					
 					
@@ -160,49 +165,34 @@
 						
 						
 						
-						<h3 class="subsubtitle task-title">Other Methods</h3>
+						
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
-		<span class="tooltip"><p>The parent object.</p></span>
+		<span class="tooltip"><p>Returns the delegate for the receiver. Must implement [STRCaptureUploadManagerDelegate].</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/captureManager">+&nbsp;captureManager</a></code>
-		<span class="tooltip"><p>Returns a new STRCaptureViewControllre object.</p></span>
+		<code><a href="#//api/name/defaultManager">+&nbsp;defaultManager</a></code>
+		<span class="tooltip"><p>Creates and returns a new STRCaptureUploadManager</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/deviceDidRotate">&ndash;&nbsp;deviceDidRotate</a></code>
-		<span class="tooltip"><p>Called to handle rotation events without updating UIInterfaceOrientation.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Button Handling" name="task_Button Handling"></a>
-						<h3 class="subsubtitle task-title">Button Handling</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/doneButtonWasPressed:">&ndash;&nbsp;doneButtonWasPressed:</a></code>
-		<span class="tooltip"><p>Called when the done button (back button) is pressed.</p></span>
+		<code><a href="#//api/name/beginUploadForCapture:">&ndash;&nbsp;beginUploadForCapture:</a></code>
+		<span class="tooltip"><p>Builds a POST request and then begins to send it asynchronously to the server.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/recordButtonWasPressed:">&ndash;&nbsp;recordButtonWasPressed:</a></code>
-		<span class="tooltip"><p>Called when the record button is pressed.</p></span>
+		<code><a href="#//api/name/cancelCurrentUpload">&ndash;&nbsp;cancelCurrentUpload</a></code>
+		<span class="tooltip"><p>Cancels the current upload.</p></span>
 	</span>
 	
 	
@@ -226,7 +216,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The parent object.</p>
+		<p>Returns the delegate for the receiver. Must implement [STRCaptureUploadManagerDelegate].</p>
 	</div>		
 	
     
@@ -243,9 +233,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The parent object.</p>
-
-<p>The delegate of a STRCaptureViewController should implement a [STRCaptureViewControllerDelegate].</p>
+		<p>Returns the delegate for the receiver. Must implement [STRCaptureUploadManagerDelegate].</p>
 	</div>
 	
 	
@@ -256,7 +244,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRCaptureViewController.h</code><br />
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
 	</div>				
 	
 	
@@ -271,18 +259,18 @@
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/captureManager" title="captureManager"></a>
-	<h3 class="subsubtitle method-title">captureManager</h3>
+	<a name="//api/name/defaultManager" title="defaultManager"></a>
+	<h3 class="subsubtitle method-title">defaultManager</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a new STRCaptureViewControllre object.</p>
+		<p>Creates and returns a new STRCaptureUploadManager</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (STRCaptureViewController *)captureManager</code></div>
+	<div class="method-subsection method-declaration"><code>+ (STRCaptureUploadManager *)defaultManager</code></div>
 
     
 	
@@ -290,7 +278,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>STRCaptureViewController a new STRCaptureViewController object.</p>
+		<p>STRCaptureUploadManager A new instance of a STRCaptureUploadManager. Have fun with it.</p>
 	</div>
 	
 	
@@ -299,9 +287,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns a new STRCaptureViewControllre object.</p>
-
-<p>Anytime you would like to present a STRCaptureViewController, you should use this method to return the initialized object. Just like presenting a view controller,</p>
+		<p>Creates and returns a new STRCaptureUploadManager</p>
 	</div>
 	
 	
@@ -312,7 +298,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRCaptureViewController.h</code><br />
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
 	</div>				
 	
 	
@@ -327,18 +313,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/deviceDidRotate" title="deviceDidRotate"></a>
-	<h3 class="subsubtitle method-title">deviceDidRotate</h3>
+	<a name="//api/name/beginUploadForCapture:" title="beginUploadForCapture:"></a>
+	<h3 class="subsubtitle method-title">beginUploadForCapture:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Called to handle rotation events without updating UIInterfaceOrientation.</p>
+		<p>Builds a POST request and then begins to send it asynchronously to the server.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)deviceDidRotate</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beginUploadForCapture:(STRCapture *)<em>capture</em></code></div>
 
     
 	
@@ -350,9 +336,9 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Called to handle rotation events without updating UIInterfaceOrientation.</p>
+		<p>Builds a POST request and then begins to send it asynchronously to the server.</p>
 
-<p>You should never need to call this method directly. It is called by the default device notification center in the event of a device rotation.</p>
+<p>Discovers all of the associated files for a capture and uploads them to the server. Because the request is asynchronous, the POST request is sent and then <a href="STRCaptureUploadManager">delegate</a> methods are called as the upload progress and status changes.</p>
 	</div>
 	
 	
@@ -363,25 +349,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRCaptureViewController.h</code><br />
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/doneButtonWasPressed:" title="doneButtonWasPressed:"></a>
-	<h3 class="subsubtitle method-title">doneButtonWasPressed:</h3>
+	<a name="//api/name/cancelCurrentUpload" title="cancelCurrentUpload"></a>
+	<h3 class="subsubtitle method-title">cancelCurrentUpload</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Called when the done button (back button) is pressed.</p>
+		<p>Cancels the current upload.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (IBAction)doneButtonWasPressed:(id)<em>sender</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)cancelCurrentUpload</code></div>
 
     
 	
@@ -393,9 +379,9 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Called when the done button (back button) is pressed.</p>
+		<p>Cancels the current upload.</p>
 
-<p>You should never need to call this method. It is handled in the SDK Storyboard.</p>
+<p>This method will call the delegate method <a href="[STRCaptureUploadManagerDelegate%20fileUploadDidStop]">fileUploadDidStop</a> once the cancellation is complete.</p>
 	</div>
 	
 	
@@ -406,50 +392,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRCaptureViewController.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/recordButtonWasPressed:" title="recordButtonWasPressed:"></a>
-	<h3 class="subsubtitle method-title">recordButtonWasPressed:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Called when the record button is pressed.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (IBAction)recordButtonWasPressed:(id)<em>sender</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Called when the record button is pressed.</p>
-
-<p>You should never need to call this method. It is handled in the SDK Storyboard.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRCaptureViewController.h</code><br />
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
 	</div>				
 	
 	

@@ -1,0 +1,597 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>STRCaptureUploadManagerDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">STRABO-MultiRecorder </a></h1>
+				<a id="developerHome" href="../index.html">Strabo, LLC</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">STRCaptureUploadManagerDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/fileUploadDidFailWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- fileUploadDidFailWithError:</option>
+	
+	<option value="//api/name/fileUploadDidProgress:">&nbsp;&nbsp;&nbsp;&nbsp;- fileUploadDidProgress:</option>
+	
+	<option value="//api/name/fileUploadDidStart">&nbsp;&nbsp;&nbsp;&nbsp;- fileUploadDidStart</option>
+	
+	<option value="//api/name/fileUploadDidStop">&nbsp;&nbsp;&nbsp;&nbsp;- fileUploadDidStop</option>
+	
+	<option value="//api/name/fileUploadFailedToStart">&nbsp;&nbsp;&nbsp;&nbsp;- fileUploadFailedToStart</option>
+	
+	<option value="//api/name/fileUploadedSuccessfullyWithToken:">&nbsp;&nbsp;&nbsp;&nbsp;- fileUploadedSuccessfullyWithToken:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileUploadDidFailWithError:">fileUploadDidFailWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileUploadDidProgress:">fileUploadDidProgress:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileUploadDidStart">fileUploadDidStart</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileUploadDidStop">fileUploadDidStop</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileUploadFailedToStart">fileUploadFailedToStart</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileUploadedSuccessfullyWithToken:">fileUploadedSuccessfullyWithToken:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="STRCaptureUploadManagerDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">STRCaptureUploadManagerDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">STRCaptureUploadManager.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>You should implement the <a href="STRCaptureUploadManagerDelegate.html">STRCaptureUploadManagerDelegate</a> to receive notifications when important things happen before, during, and after file uploading. The methods in this protocol will help you handle an upload and alert the user about upload progress, failure, or success.</p>
+
+<p>Method Implementation</p>
+
+<p>All of the methods in this protocol are optional, but it will be important to implement most if not all of them for proper handling of the upload.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fileUploadDidProgress:">&ndash;&nbsp;fileUploadDidProgress:</a></code>
+		<span class="tooltip"><p>Called whenever the upload sends a packet of data to the server from the current connection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fileUploadDidStart">&ndash;&nbsp;fileUploadDidStart</a></code>
+		<span class="tooltip"><p>Called after the post request is built and the connection to the server has started.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fileUploadFailedToStart">&ndash;&nbsp;fileUploadFailedToStart</a></code>
+		<span class="tooltip"><p>Called if there was a problem starting the upload connection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fileUploadedSuccessfullyWithToken:">&ndash;&nbsp;fileUploadedSuccessfullyWithToken:</a></code>
+		<span class="tooltip"><p>Reports that the upload of the capture has completed and that the server responded successfully.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fileUploadDidStop">&ndash;&nbsp;fileUploadDidStop</a></code>
+		<span class="tooltip"><p>Called when the capture upload was cancelled by a method call to <a href="[STRCaptureUploadManager%20cancelCurrentUpload]">cancelCurrentUpload</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fileUploadDidFailWithError:">&ndash;&nbsp;fileUploadDidFailWithError:</a></code>
+		<span class="tooltip"><p>Reports that the capture was not able to be successfully uploaded.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/fileUploadDidFailWithError:" title="fileUploadDidFailWithError:"></a>
+	<h3 class="subsubtitle method-title">fileUploadDidFailWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reports that the capture was not able to be successfully uploaded.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fileUploadDidFailWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Reports that the capture was not able to be successfully uploaded.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fileUploadDidProgress:" title="fileUploadDidProgress:"></a>
+	<h3 class="subsubtitle method-title">fileUploadDidProgress:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called whenever the upload sends a packet of data to the server from the current connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fileUploadDidProgress:(NSNumber *)<em>progress</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>progress</em></dt>
+			<dd><p>Progress is reported out of a total 1.0. The value should be less than 1 until it is predicted that the upload has been completed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Called whenever the upload sends a packet of data to the server from the current connection.</p>
+
+<p>This method is called periodically throughout an upload. It estimates the progress of the upload based on the total size of the request and the data sent thus far. It should be noted that this is only an estimate and does not reflect the true upload progress. It is possible, for example, for a progress value to be less than the previous progress value reported.</p>
+
+<p>Once the upload has been completed, the progress is reported as 1.0. An upload will never complete without first reporting complete upload progress.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fileUploadDidStart" title="fileUploadDidStart"></a>
+	<h3 class="subsubtitle method-title">fileUploadDidStart</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called after the post request is built and the connection to the server has started.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fileUploadDidStart</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Called after the post request is built and the connection to the server has started.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fileUploadDidStop" title="fileUploadDidStop"></a>
+	<h3 class="subsubtitle method-title">fileUploadDidStop</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the capture upload was cancelled by a method call to <a href="[STRCaptureUploadManager%20cancelCurrentUpload]">cancelCurrentUpload</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fileUploadDidStop</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Called when the capture upload was cancelled by a method call to <a href="[STRCaptureUploadManager%20cancelCurrentUpload]">cancelCurrentUpload</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fileUploadFailedToStart" title="fileUploadFailedToStart"></a>
+	<h3 class="subsubtitle method-title">fileUploadFailedToStart</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called if there was a problem starting the upload connection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fileUploadFailedToStart</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Called if there was a problem starting the upload connection.</p>
+
+<p>This method is called either if the capture that was passed to the server was invalid or if the connection to the server failed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fileUploadedSuccessfullyWithToken:" title="fileUploadedSuccessfullyWithToken:"></a>
+	<h3 class="subsubtitle method-title">fileUploadedSuccessfullyWithToken:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reports that the upload of the capture has completed and that the server responded successfully.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fileUploadedSuccessfullyWithToken:(NSString *)<em>token</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>token</em></dt>
+			<dd><p>The token associated with the track. You should handle the token appropriately, as described in the <a href="../docs/help/WorkingWithTheSDK.html">Working With The SDK</a> guide.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Reports that the upload of the capture has completed and that the server responded successfully.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureUploadManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-07-20)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

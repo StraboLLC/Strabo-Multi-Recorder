@@ -42,4 +42,14 @@ cp -r $DOCS_ORIGIN $DOCS_DEST
 
 echo "BUILD INFO | Documentation copied to DOCS folder."
 
+# Copy docset to the local site directory for upload
+
+WEB_DOCS_ORIGIN=$DOCS_ORIGIN/Contents/Resources/Documents
+WEB_DOCS_DEST=~/Sites/mobile.strabo.co/docs/multirecorder/
+
+cp -r $WEB_DOCS_ORIGIN $WEB_DOCS_DEST
+
+echo "BUILD INFO | Documentation copied to local web server."
+echo "BUILD INFO | Documentation awaiting upload to mobile.strabo.co."
+
 echo ""
