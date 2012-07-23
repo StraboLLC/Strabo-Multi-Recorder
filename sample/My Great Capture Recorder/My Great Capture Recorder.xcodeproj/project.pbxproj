@@ -19,6 +19,8 @@
 		9629ABFB15AB6AED004FB443 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABFA15AB6AED004FB443 /* CoreLocation.framework */; };
 		9629ABFD15AB6B17004FB443 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABFC15AB6B17004FB443 /* QuartzCore.framework */; };
 		96380D4E15B738FC00EB68E3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96380D4D15B738FC00EB68E3 /* CoreMedia.framework */; };
+		96488FF415BDAE77007AE1BC /* CapturesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */; };
+		96488FFB15BDC7D5007AE1BC /* CaptureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */; };
 		964CB16B15B994EF00B1B1DC /* libSTRABO-MultiRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 964CB15F15B994EF00B1B1DC /* libSTRABO-MultiRecorder.a */; };
 		964CB16C15B994EF00B1B1DC /* STRMultiRecorderStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964CB16A15B994EF00B1B1DC /* STRMultiRecorderStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,10 @@
 		9629ABFA15AB6AED004FB443 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9629ABFC15AB6B17004FB443 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		96380D4D15B738FC00EB68E3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		96488FF215BDAE77007AE1BC /* CapturesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapturesTableViewController.h; sourceTree = "<group>"; };
+		96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapturesTableViewController.m; sourceTree = "<group>"; };
+		96488FF915BDC7D5007AE1BC /* CaptureDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureDetailViewController.h; sourceTree = "<group>"; };
+		96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureDetailViewController.m; sourceTree = "<group>"; };
 		964CB15F15B994EF00B1B1DC /* libSTRABO-MultiRecorder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSTRABO-MultiRecorder.a"; sourceTree = "<group>"; };
 		964CB16015B994EF00B1B1DC /* multi-recorder-sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "multi-recorder-sdk.h"; sourceTree = "<group>"; };
 		964CB16115B994EF00B1B1DC /* NSDate+Date_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Date_Utilities.h"; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 				9629ABC215AB45BF004FB443 /* MainStoryboard.storyboard */,
 				9629ABC515AB45BF004FB443 /* RootViewController.h */,
 				9629ABC615AB45C0004FB443 /* RootViewController.m */,
+				96488FF215BDAE77007AE1BC /* CapturesTableViewController.h */,
+				96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */,
+				96488FF915BDC7D5007AE1BC /* CaptureDetailViewController.h */,
+				96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */,
 				9629ABB715AB45BF004FB443 /* Supporting Files */,
 			);
 			path = "My Great Capture Recorder";
@@ -217,6 +227,8 @@
 				9629ABBD15AB45BF004FB443 /* main.m in Sources */,
 				9629ABC115AB45BF004FB443 /* AppDelegate.m in Sources */,
 				9629ABC715AB45C0004FB443 /* RootViewController.m in Sources */,
+				96488FF415BDAE77007AE1BC /* CapturesTableViewController.m in Sources */,
+				96488FFB15BDC7D5007AE1BC /* CaptureDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

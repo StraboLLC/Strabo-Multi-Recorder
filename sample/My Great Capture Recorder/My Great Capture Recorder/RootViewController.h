@@ -14,6 +14,5 @@
 
 // Button handling
 -(IBAction)cameraButtonWasPressed:(id)sender;
--(IBAction)listButtonWasPressed:(id)sender;
 
 @end
