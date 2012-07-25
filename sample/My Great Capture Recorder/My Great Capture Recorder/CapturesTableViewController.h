@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "CaptureDetailViewController.h"
 
-@interface CapturesTableViewController : UITableViewController
+#import "multi-recorder-sdk.h"
+
+@interface CapturesTableViewController : UITableViewController {
+    
+    // An array to hold the local captures
+    NSArray * captureArray;
+}
 
 @end

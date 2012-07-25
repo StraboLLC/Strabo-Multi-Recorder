@@ -280,6 +280,7 @@
 					"-ObjC",
 				);
 				SDKROOT = iphoneos;
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -304,6 +305,7 @@
 				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
@@ -318,6 +320,7 @@
 					"\"$(SRCROOT)/../../src\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -333,6 +336,7 @@
 					"\"$(SRCROOT)/../../src\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

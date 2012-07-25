@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>STRGeoLocationData Class Reference</title>
+		<title>NSString(Hash) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">STRGeoLocationData Class Reference</h1>
+				<h1 class="hideInXcode">NSString(Hash) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -44,11 +44,9 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/addDataPointWithLatitude:longitude:heading:timestamp:accuracy:">&nbsp;&nbsp;&nbsp;&nbsp;- addDataPointWithLatitude:longitude:heading:timestamp:accuracy:</option>
+	<option value="//api/name/MD5">&nbsp;&nbsp;&nbsp;&nbsp;- MD5</option>
 	
-	<option value="//api/name/dataPointList">&nbsp;&nbsp;&nbsp;&nbsp;- dataPointList</option>
-	
-	<option value="//api/name/writeDataPointsToTempFile">&nbsp;&nbsp;&nbsp;&nbsp;- writeDataPointsToTempFile</option>
+	<option value="//api/name/SHA2">&nbsp;&nbsp;&nbsp;&nbsp;- SHA2</option>
 	
 	
 	
@@ -78,11 +76,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addDataPointWithLatitude:longitude:heading:timestamp:accuracy:">addDataPointWithLatitude:longitude:heading:timestamp:accuracy:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5">MD5</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataPointList">dataPointList</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeDataPointsToTempFile">writeDataPointsToTempFile</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/SHA2">SHA2</a></span></li>
 	
 </ul></li>
 
@@ -91,7 +87,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="STRGeoLocationData Class Reference" name="top"></a>
+				<a title="NSString(Hash) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -100,18 +96,15 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">STRGeoLocationData Class Reference</h1>
+						<h1 class="title title-header">NSString(Hash) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">STRGeoLocationData.h</td>
+	<td class="specification-value">NSString+Hash.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -121,9 +114,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Holds the geo-location data recorded by a capture.</p>
-
-<p>Using one of these objects is a convenient way to store a series of geo-data points associated with any type of capture supported by Strabo.</p>
+						<p>Extends NSString with functions to produced hashed strings.</p>
 					</div>
 					
 					
@@ -141,22 +132,15 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/addDataPointWithLatitude:longitude:heading:timestamp:accuracy:">&ndash;&nbsp;addDataPointWithLatitude:longitude:heading:timestamp:accuracy:</a></code>
-		<span class="tooltip"><p>Add a datapoint to the list of points.</p></span>
+		<code><a href="#//api/name/MD5">&ndash;&nbsp;MD5</a></code>
+		<span class="tooltip"><p>Hashes a given string with the MD5 algorithm.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/dataPointList">&ndash;&nbsp;dataPointList</a></code>
-		<span class="tooltip"><p>Returns an array of points.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/writeDataPointsToTempFile">&ndash;&nbsp;writeDataPointsToTempFile</a></code>
-		<span class="tooltip"><p>Write the collected data points to a temporary file in the tmp directory.</p></span>
+		<code><a href="#//api/name/SHA2">&ndash;&nbsp;SHA2</a></code>
+		<span class="tooltip"><p>Hashes a given string with the SHA2 algorithm.</p></span>
 	</span>
 	
 	
@@ -178,50 +162,20 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/addDataPointWithLatitude:longitude:heading:timestamp:accuracy:" title="addDataPointWithLatitude:longitude:heading:timestamp:accuracy:"></a>
-	<h3 class="subsubtitle method-title">addDataPointWithLatitude:longitude:heading:timestamp:accuracy:</h3>
+	<a name="//api/name/MD5" title="MD5"></a>
+	<h3 class="subsubtitle method-title">MD5</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Add a datapoint to the list of points.</p>
+		<p>Hashes a given string with the MD5 algorithm.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)addDataPointWithLatitude:(double)<em>latitude</em> longitude:(double)<em>longitude</em> heading:(double)<em>heading</em> timestamp:(double)<em>timestamp</em> accuracy:(double)<em>accuracy</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)MD5</code></div>
 
     
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>latitude</em></dt>
-			<dd><p>The latitude double value.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>longitude</em></dt>
-			<dd><p>The longitude double value.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>heading</em></dt>
-			<dd><p>The 360 degree heading double value.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>timestamp</em></dt>
-			<dd><p>The timestamp double value. This value should be used to tag the data point with a video scrub timestamp or an audio timestamp. Pass 0 if the timestamp field is not applicable.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>accuracy</em></dt>
-			<dd><p>The accuracy of the datapoint, in meters.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
@@ -231,7 +185,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Add a datapoint to the list of points.</p>
+		<p>Hashes a given string with the MD5 algorithm.</p>
 	</div>
 	
 	
@@ -242,25 +196,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRGeoLocationData.h</code><br />
+		<code class="declared-in-ref">NSString+Hash.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/dataPointList" title="dataPointList"></a>
-	<h3 class="subsubtitle method-title">dataPointList</h3>
+	<a name="//api/name/SHA2" title="SHA2"></a>
+	<h3 class="subsubtitle method-title">SHA2</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns an array of points.</p>
+		<p>Hashes a given string with the SHA2 algorithm.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSArray *)dataPointList</code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)SHA2</code></div>
 
     
 	
@@ -272,25 +226,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns an array of points.</p>
-
-<p>The points are in dictionary format and can easily be written to JSON. The array returned is in the following format where {} designate dictionary objects:</p>
-
-<pre><code>[
-    {
-        "coords":[(double)latitude, (double)longitude],
-        "heading": (double)heading,
-        "accurady": (double)accuracy,
-        "timestamp": (double)timestamp
-    },
-    {
-        "coords":[(double)latitude, (double)longitude],
-        "heading": (double)heading,
-        "accurady": (double)accuracy,
-        "timestamp": (double)timestamp
-    }
-]
-</code></pre>
+		<p>Hashes a given string with the SHA2 algorithm.</p>
 	</div>
 	
 	
@@ -301,50 +237,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRGeoLocationData.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/writeDataPointsToTempFile" title="writeDataPointsToTempFile"></a>
-	<h3 class="subsubtitle method-title">writeDataPointsToTempFile</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Write the collected data points to a temporary file in the tmp directory.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)writeDataPointsToTempFile</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Write the collected data points to a temporary file in the tmp directory.</p>
-
-<p>The name of this file will be output.JSON</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">STRGeoLocationData.h</code><br />
+		<code class="declared-in-ref">NSString+Hash.h</code><br />
 	</div>				
 	
 	

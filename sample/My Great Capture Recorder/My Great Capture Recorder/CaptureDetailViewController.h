@@ -10,9 +10,14 @@
 #import "multi-recorder-SDK.h"
 
 @interface CaptureDetailViewController : UIViewController {
+    // UI Elements
     IBOutlet UILabel * titleLabel;
+    IBOutlet UILabel * tokenLabel;
+    IBOutlet UIImageView * thumbnailImage;
+    
+    STRCapture * _localCapture;
 }
 
--(void)loadInfoForCapture:(STRCapture *)capture;
+@property(nonatomic, strong)STRCapture * localCapture;
 
 @end

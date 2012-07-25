@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**
  Holds all of the information about a capture taken with the Strabo MultiRecorder.
@@ -18,18 +19,24 @@
  ------------------------
  */
 @interface STRCapture : NSObject {
-    NSString * captureInfoPath;
-    NSDate * creationDate;
-    NSString * geoDataPath;
-    NSNumber * latitude;
-    NSNumber * longitude;
-    NSString * mediaPath;
-    NSString * thumbnailPath;
-    NSString * title;
-    NSString * token;
-    NSString * type;
-    NSDate * uploadDate;
+    NSString * _captureInfoPath;
+    NSDate * _creationDate;
+    NSString * _geoDataPath;
+    NSNumber * _latitude;
+    NSNumber * _longitude;
+    NSString * _mediaPath;
+    NSString * _thumbnailPath;
+    NSString * _title;
+    NSString * _token;
+    NSString * _type;
+    NSDate * _uploadDate;
+    UIImage * _thumbnailIamge;
 }
+
+/**
+ A UIImage representation of the associated thumbnail image.
+ */
+@property(readonly)UIImage * thumbnailImage;
 
 ///---------------------------------------------------------------------------------------
 /// @name Geodata

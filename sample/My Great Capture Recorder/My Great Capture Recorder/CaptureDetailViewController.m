@@ -23,16 +23,15 @@
     return self;
 }
 
--(void)loadInfoForCapture:(STRCapture *)capture {
-    titleLabel.text = capture.title;
-}
-
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    titleLabel.text = _localCapture.title;
+    tokenLabel.text = _localCapture.token;
+    thumbnailImage.image = _localCapture.thumbnailImage;
 }
 
 - (void)didReceiveMemoryWarning
