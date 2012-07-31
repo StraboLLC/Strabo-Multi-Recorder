@@ -31,7 +31,7 @@ cp $H_ORIGIN $SOURCE
 # cp $M_ORIGIN $SOURCE
 cp $STORYBOARD_ORIGIN $SOURCE
 
-echo "BUILD INFO | All .h and .storyboard files coppied to the source folder."
+echo "BUILD INFO | All .h and .storyboard files copied to the source folder."
 
 # Copy docs to the docs folder
 
