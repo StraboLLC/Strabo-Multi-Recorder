@@ -21,7 +21,8 @@
 	
 	<key>DocSetMinimumXcodeVersion</key>
 	<string>3.0</string>
-	<key>DocSetPlatformFamily</key>
+	
+	<key>DashDocSetFamily</key>
 	<string>appledoc</string>
 	<key>DocSetPublisherIdentifier</key>
 	<string>com.strabogis.documentation</string>
