@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2818" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SeQ-7c-Lxh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2818" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SeQ-7c-Lxh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1900"/>
     </dependencies>
@@ -115,41 +115,82 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Label" textAlignment="center" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="lZt-NE-88b">
-                                <nil key="highlightedColor"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            </label>
-                            <imageView translatesAutoresizingMaskIntoConstraints="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="BuT-fw-jcA">
+                            <imageView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="BuT-fw-jcA">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="KLU-7x-1Kc"/>
                                     <constraint firstAttribute="width" constant="175" id="YXz-19-s59"/>
                                 </constraints>
                             </imageView>
-                            <label translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Label" textAlignment="center" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="GAI-wR-jd6">
+                            <label translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" text="Date" textAlignment="center" adjustsFontSizeToFit="NO" autoshrinkMode="none" id="GAI-wR-jd6">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="083-09-LoV"/>
+                                </constraints>
                                 <nil key="highlightedColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             </label>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" hasAttributedTitle="NO" lineBreakMode="middleTruncation" id="pnf-yK-qn4">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Upload Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadButtonWasPressed:" destination="E86-Di-HoS" eventType="touchUpInside" id="p99-TW-7xz"/>
+                                </connections>
+                            </button>
+                            <label translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" text="This track has already been uploaded successfully." textAlignment="center" adjustsFontSizeToFit="NO" autoshrinkMode="none" preferredMaxLayoutWidth="152" id="rwf-YQ-cUj" userLabel="Successful Upload">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="7cr-Q5-83l"/>
+                                    <constraint firstAttribute="height" constant="45" id="w5b-av-g5W"/>
+                                </constraints>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            </label>
+                            <textField translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Untitled Track" minimumFontSize="17" text="" textAlignment="center" id="atv-oi-g5w">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="njk-fE-ZHr"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            </textField>
+                            <progressView translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" contentMode="scaleToFill" progress="0.5" id="kFC-N6-RX0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="qfh-Xh-9Bf"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BuT-fw-jcA" firstAttribute="centerX" secondItem="lZt-NE-88b" secondAttribute="centerX" type="default" id="6Jc-V1-V7T"/>
-                            <constraint firstItem="lZt-NE-88b" firstAttribute="leading" secondItem="KgX-xc-uMJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DQy-gf-FW7"/>
-                            <constraint firstItem="lZt-NE-88b" firstAttribute="top" secondItem="KgX-xc-uMJ" secondAttribute="top" constant="20" symbolic="YES" type="default" id="VPp-oQ-cDL"/>
                             <constraint firstItem="GAI-wR-jd6" firstAttribute="top" secondItem="BuT-fw-jcA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WTr-4D-24h"/>
-                            <constraint firstItem="BuT-fw-jcA" firstAttribute="top" secondItem="lZt-NE-88b" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hio-gC-L0C"/>
-                            <constraint firstItem="GAI-wR-jd6" firstAttribute="leading" secondItem="KgX-xc-uMJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jTj-vu-n0y"/>
-                            <constraint firstAttribute="trailing" secondItem="GAI-wR-jd6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sfU-Kv-mW7"/>
-                            <constraint firstAttribute="trailing" secondItem="lZt-NE-88b" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ycu-O1-f2G"/>
+                            <constraint firstItem="atv-oi-g5w" firstAttribute="leading" secondItem="KgX-xc-uMJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eBW-oA-rH5"/>
+                            <constraint firstItem="GAI-wR-jd6" firstAttribute="leading" secondItem="KgX-xc-uMJ" secondAttribute="leading" constant="19" id="flB-U3-502"/>
+                            <constraint firstItem="kFC-N6-RX0" firstAttribute="centerX" secondItem="BuT-fw-jcA" secondAttribute="centerX" type="default" id="gaS-70-h7v"/>
+                            <constraint firstItem="atv-oi-g5w" firstAttribute="top" secondItem="KgX-xc-uMJ" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mZk-0M-c7K"/>
+                            <constraint firstItem="rwf-YQ-cUj" firstAttribute="top" secondItem="GAI-wR-jd6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ngS-NC-clL"/>
+                            <constraint firstItem="GAI-wR-jd6" firstAttribute="centerX" secondItem="pnf-yK-qn4" secondAttribute="centerX" type="default" id="oht-zV-Gpq"/>
+                            <constraint firstAttribute="bottom" secondItem="pnf-yK-qn4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="tH7-Iz-BEF"/>
+                            <constraint firstAttribute="trailing" secondItem="atv-oi-g5w" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uEf-Nb-Sf4"/>
+                            <constraint firstItem="pnf-yK-qn4" firstAttribute="top" secondItem="kFC-N6-RX0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vS7-GL-rzM"/>
+                            <constraint firstItem="BuT-fw-jcA" firstAttribute="top" secondItem="KgX-xc-uMJ" secondAttribute="top" constant="71" id="vih-6y-nED"/>
+                            <constraint firstItem="pnf-yK-qn4" firstAttribute="centerX" secondItem="BuT-fw-jcA" secondAttribute="centerX" type="default" id="xHV-aq-1UH"/>
+                            <constraint firstItem="rwf-YQ-cUj" firstAttribute="centerX" secondItem="atv-oi-g5w" secondAttribute="centerX" type="default" id="yfa-2i-P1F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G8K-cI-snK"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="dateLabel" destination="GAI-wR-jd6" id="mK6-JB-Ndd"/>
+                        <outlet property="progressView" destination="kFC-N6-RX0" id="rPi-88-MGf"/>
                         <outlet property="thumbnailImage" destination="BuT-fw-jcA" id="7wE-lO-sMV"/>
-                        <outlet property="titleLabel" destination="lZt-NE-88b" id="Lrt-Uh-xSM"/>
-                        <outlet property="tokenLabel" destination="GAI-wR-jd6" id="QBV-ia-K6X"/>
+                        <outlet property="titleField" destination="atv-oi-g5w" id="QTr-gm-rDu"/>
+                        <outlet property="uploadButton" destination="pnf-yK-qn4" id="CVb-Uw-HeX"/>
+                        <outlet property="uploadSuccessLabel" destination="rwf-YQ-cUj" id="QZO-fj-NB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2c-QM-Ek3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,9 +202,13 @@
         <class className="CaptureDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CaptureDetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="uploadButtonWasPressed:"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="thumbnailImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tokenLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="uploadButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="uploadSuccessLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="CapturesTableViewController" superclassName="UITableViewController">
