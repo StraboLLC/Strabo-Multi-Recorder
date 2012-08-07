@@ -151,7 +151,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             </label>
-                            <textField translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Untitled Track" minimumFontSize="17" text="" textAlignment="center" id="atv-oi-g5w">
+                            <textField translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Untitled Track" minimumFontSize="17" clearButtonMode="whileEditing" text="" textAlignment="center" id="atv-oi-g5w">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="njk-fE-ZHr"/>
                                 </constraints>

@@ -13,7 +13,6 @@
 		9629ABBB15AB45BF004FB443 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9629ABB915AB45BF004FB443 /* InfoPlist.strings */; };
 		9629ABBD15AB45BF004FB443 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629ABBC15AB45BF004FB443 /* main.m */; };
 		9629ABC115AB45BF004FB443 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629ABC015AB45BF004FB443 /* AppDelegate.m */; };
-		9629ABC415AB45BF004FB443 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9629ABC215AB45BF004FB443 /* MainStoryboard.storyboard */; };
 		9629ABC715AB45C0004FB443 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9629ABC615AB45C0004FB443 /* RootViewController.m */; };
 		9629ABF915AB6AE2004FB443 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABF815AB6AE2004FB443 /* AVFoundation.framework */; };
 		9629ABFB15AB6AED004FB443 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABFA15AB6AED004FB443 /* CoreLocation.framework */; };
@@ -23,6 +22,7 @@
 		96C500DE15C84FB500A63FC2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C500DD15C84FB500A63FC2 /* CoreMedia.framework */; };
 		96F9CFBA15C059DB00CB5B20 /* libSTRABO-MultiRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F9CFAE15C059DB00CB5B20 /* libSTRABO-MultiRecorder.a */; };
 		96F9CFBB15C059DB00CB5B20 /* STRMultiRecorderStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F9CFB915C059DB00CB5B20 /* STRMultiRecorderStoryboard.storyboard */; };
+		96FB286D15D153B500BE00C2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FB286C15D153B500BE00C2 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,6 @@
 		9629ABBE15AB45BF004FB443 /* My Great Capture Recorder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My Great Capture Recorder-Prefix.pch"; sourceTree = "<group>"; };
 		9629ABBF15AB45BF004FB443 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9629ABC015AB45BF004FB443 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9629ABC315AB45BF004FB443 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9629ABC515AB45BF004FB443 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		9629ABC615AB45C0004FB443 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		9629ABF815AB6AE2004FB443 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -59,6 +58,7 @@
 		96F9CFB715C059DB00CB5B20 /* STRCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureViewController.h; sourceTree = "<group>"; };
 		96F9CFB815C059DB00CB5B20 /* STRGeoLocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRGeoLocationData.h; sourceTree = "<group>"; };
 		96F9CFB915C059DB00CB5B20 /* STRMultiRecorderStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = STRMultiRecorderStoryboard.storyboard; sourceTree = "<group>"; };
+		96FB286C15D153B500BE00C2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,13 +117,13 @@
 				96F9CFAD15C059DB00CB5B20 /* src */,
 				9629ABBF15AB45BF004FB443 /* AppDelegate.h */,
 				9629ABC015AB45BF004FB443 /* AppDelegate.m */,
-				9629ABC215AB45BF004FB443 /* MainStoryboard.storyboard */,
 				9629ABC515AB45BF004FB443 /* RootViewController.h */,
 				9629ABC615AB45C0004FB443 /* RootViewController.m */,
 				96488FF215BDAE77007AE1BC /* CapturesTableViewController.h */,
 				96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */,
 				96488FF915BDC7D5007AE1BC /* CaptureDetailViewController.h */,
 				96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */,
+				96FB286C15D153B500BE00C2 /* MainStoryboard.storyboard */,
 				9629ABB715AB45BF004FB443 /* Supporting Files */,
 			);
 			path = "My Great Capture Recorder";
@@ -212,8 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9629ABBB15AB45BF004FB443 /* InfoPlist.strings in Resources */,
-				9629ABC415AB45BF004FB443 /* MainStoryboard.storyboard in Resources */,
 				96F9CFBB15C059DB00CB5B20 /* STRMultiRecorderStoryboard.storyboard in Resources */,
+				96FB286D15D153B500BE00C2 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,14 +243,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9629ABC215AB45BF004FB443 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9629ABC315AB45BF004FB443 /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -261,6 +253,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Beatty (94362R9LS8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -274,11 +267,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
+				PROVISIONING_PROFILE = "6922FBC3-B9E2-4D95-99D7-4EB627228122";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = armv7;
 			};
@@ -291,18 +285,20 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Strabo, LLC";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
+				PROVISIONING_PROFILE = "0CFBC1F3-618A-4AB2-9A48-DA75D8E5F1F0";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
@@ -312,14 +308,17 @@
 		9629ABCB15AB45C0004FB443 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Beatty (94362R9LS8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "My Great Capture Recorder/My Great Capture Recorder-Prefix.pch";
 				INFOPLIST_FILE = "My Great Capture Recorder/My Great Capture Recorder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../src\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6922FBC3-B9E2-4D95-99D7-4EB627228122";
 				VALID_ARCHS = "armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
@@ -328,14 +327,17 @@
 		9629ABCC15AB45C0004FB443 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Strabo, LLC";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "My Great Capture Recorder/My Great Capture Recorder-Prefix.pch";
 				INFOPLIST_FILE = "My Great Capture Recorder/My Great Capture Recorder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../src\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0CFBC1F3-618A-4AB2-9A48-DA75D8E5F1F0";
 				VALID_ARCHS = "armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};

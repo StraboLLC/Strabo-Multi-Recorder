@@ -19,7 +19,13 @@
 
 @end
 
-@interface CaptureDetailViewController (UITextField)
+@interface CaptureDetailViewController (UITextFieldDelegate) <UITextFieldDelegate>
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField;
+
+@end
+
+@interface CaptureDetailViewController (UITextViewDelegate) <UITextViewDelegate>
 
 @end
 
@@ -53,14 +59,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    titleField.delegate = self;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    // Refresh all dynamic parts of the detail view
     [self refreshCaptureDetail];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     // Save any changes made to the capture object
+    _localCapture.title = titleField.text;
     [_localCapture save];
 }
 
@@ -103,9 +112,10 @@
     [progressView setProgress:1.0 animated:YES];
     // Save the upload date to the capture
     _localCapture.uploadDate = [NSDate date];
+    [_localCapture save];
     // Refresh the user interface
     [self refreshCaptureDetail];
-    NSLog(@"File uploaded successfully.");
+    NSLog(@"File uploaded successfully with token: %@.", token);
 }
 
 -(void)fileUploadDidStop {
@@ -135,6 +145,9 @@
     // Either way, hide the progress view
     [progressView setHidden:YES];
     
+    // Show the token
+    tokenLabel.text = _localCapture.token;
+    
     // Set up a date formatter to beautify the NSDate from the capture object
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM/dd/yyyy 'at' hh:mm a"];
@@ -151,5 +164,19 @@
     uploadManager.delegate = self;
     [uploadManager beginUploadForCapture:_localCapture];
 }
+
+@end
+
+@implementation CaptureDetailViewController (UITextFieldDelegate)
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    // Hide the keyboard when the user presses the done button
+    [textField resignFirstResponder];
+    return NO;
+}
+
+@end
+
+@implementation CaptureDetailViewController (UITextViewDelegate)
 
 @end

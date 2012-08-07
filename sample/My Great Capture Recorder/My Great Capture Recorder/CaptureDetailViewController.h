@@ -17,6 +17,7 @@
     IBOutlet UIButton * uploadButton;
     IBOutlet UIProgressView * progressView;
     IBOutlet UIImageView * thumbnailImage;
+    IBOutlet UILabel * tokenLabel;
     
     STRCapture * _localCapture;
 }
