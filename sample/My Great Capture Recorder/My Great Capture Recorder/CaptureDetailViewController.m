@@ -145,7 +145,8 @@
     // Either way, hide the progress view
     [progressView setHidden:YES];
     
-    // Show the token
+    // Show the token for development purposes
+    // You would not normally want to show this to the user
     tokenLabel.text = _localCapture.token;
     
     // Set up a date formatter to beautify the NSDate from the capture object
