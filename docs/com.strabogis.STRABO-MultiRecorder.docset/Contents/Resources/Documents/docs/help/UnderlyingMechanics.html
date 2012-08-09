@@ -32,7 +32,7 @@
 <ol>
 <li><a href="#capturetokens">Capture Tokens</a></li>
 <li><a href="#generalfilestructure">General File Structure</a></li>
-<li><a href="#filetypedetails">File Type Details</a></li>
+<li><a href="#filedetails">File Details</a></li>
 <li><a href="#recordingflow">Recording Flow</a></li>
 <li><a href="#fileuploads">File Uploads</a></li>
 </ol>
@@ -41,8 +41,6 @@
 <p><a name="capturetokens"></a></p>
 
 <h2>Capture Tokens</h2>
-
-<h3>Overview</h3>
 
 <p>A unique capture token is generated for every capture taken by a user.</p>
 
@@ -56,13 +54,184 @@
 
 <h2>General File Structure</h2>
 
-<p><strong><em>STUB</em></strong></p>
+<h3>Overview</h3>
 
-<p><a name="filetypedetails"></a></p>
+<p>All captures are stored in a folder within the application documents directory. This directory is located at the following path:</p>
 
-<h2>File Type Details</h2>
+<pre><code>/Documents/StraboCaptures
+</code></pre>
 
-<p><strong><em>STUB</em></strong></p>
+<p>All of the files pertaining to a capture are located within a subdirectory named according to that capture&rsquo;s token. For example, if the capture token is <code>338d2c23d2308bfced6117b3e9d63180d5594c8a9f5b8bd5a050914c239f358d</code>, the relevant capture files would be located in:</p>
+
+<pre><code>/Documents/StraboCaptures/338d2c23d2308bfced6117b3e9d63180d5594c8a9f5b8bd5a050914c239f358d
+</code></pre>
+
+<p>Although this makes for rather long file paths, it ensures unique paths.</p>
+
+<h3>Capture Files</h3>
+
+<p>Each capture has four files:</p>
+
+<table>
+    <tr style="font-weight: bold;">
+        <td>Description</td><td>File&nbsp;Name</td><td>File&nbsp;Extension</td><td>File&nbsp;Type</td><td>Notes</td>
+    </tr>
+    <tr>
+        <td><a href="#mediafile">Media</a></td><td>&lt;Capture&nbsp;Token&gt;</td><td>.mov or .jpg</td><td>MOV or JPEG</td><td></td>
+    </tr>
+    <tr>
+        <td><a href="#thumbnailimagefile">Thumbnail Image</a></td><td>&lt;Capture&nbsp;Token&gt;</td><td>.png</td><td>PNG</td><td>A thumbnail image representation of the media file. This image should fit into a 300x300 px box. The aspect ratio may be different based on the device used to capture the video or image. Thus, this image is resized so that no side is longer than 300 pixels and the original aspect ratio is preserved.</td>
+    </tr>
+    <tr>
+        <td><a href="#geodatafile">Geo-Data</a></td><td>&lt;Capture&nbsp;Token&gt;</td><td>.json</td><td>JSON</td><td></td>
+    </tr>
+    <tr>
+        <td><a href="#captureinfofile">Capture Info</a></td><td>capture-info</td><td>.json</td><td>JSON</td><td></td>
+    </tr>
+</table>
+
+
+<p><a name="filedetails"></a></p>
+
+<h2>File Details</h2>
+
+<p><a name="mediafile"></a></p>
+
+<h3>Media</h3>
+
+<p>This file could either be a quicktime movie file or an image, depending on the type of capture taken. It is automatically rotated to the proper orientation. If you need to programatically determine whether this is a movie file or an image file, you can use either the file extension or the <code>media_type</code> property in the <a href="#captureinfofile">Capture Info</a> file.</p>
+
+<p><a name="thumbnailimagefile"></a></p>
+
+<h3>Thumbnail Image</h3>
+
+<p>This file is a small image (PNG) representation of the media file. If the media file is an image, then the thumbnail is simply a scaled-down version of the media (image) file. Alternatively, if the media file is a movie, then the thumbnail is generated from one of the first frames of the media (movie) file.</p>
+
+<p>Different types of media files capture visual data with different aspect ratios and qualities. Similarly, not all Apple devices are capable of capturing high resolution images and video with the same aspect ratios. Because of the great variability expected in aspect ratios of the media file, the thumbnail is always generated to maintain that aspect ratio. It is scaled so that no side is greater than 300 px. Thus, it will always fit into a 300x300 box. Keep this in mind if you choose to display the thumbnail image as a representation of capture media.</p>
+
+<p><a name="geodatafile"></a></p>
+
+<h3>Geo-Data</h3>
+
+<p>This file contains an array of points (in JSON format) that correspond to geo-data points collected during a capture. If the capture is an image, the array may contain only one point. If the capture is a video, the array contains a number (possibly very large) of points. The number of points will never be zero &ndash; the array will never be empty.</p>
+
+<p>Each point is a dictionary (or hash table, depending on your preferred terminology&hellip;) which contains specific information about that point including a timestamp, accuracy (in meters), latitude and longitude coordinates, and a heading (in degrees). Points are collected when the device senses a change in location or heading during a capture, so the timestamp interval between two points is not standard.</p>
+
+<p>The contents of a sample Geo-Data file for an exceptionally short movie would look similar to the following:</p>
+
+<pre><code>{
+    "points": [{
+        "timestamp": 0,
+        "accuracy": 65,
+        "coords": [43.62538491719486, -72.51787712345703],
+        "heading": 99.43981838226318
+    }, {
+        "timestamp": 0.1515992499989807,
+        "accuracy": 65,
+        "coords": [43.62538491719486, -72.51787712345703],
+        "heading": 98.43981838226318
+    }, {
+        "timestamp": 0.3319714166718768,
+        "accuracy": 65,
+        "coords": [43.62538491719486, -72.51787712345703],
+        "heading": 97.43981838226318
+    }, {
+        "timestamp": 0.4355032083331025,
+        "accuracy": 65,
+        "coords": [43.62538491719486, -72.51787712345703],
+        "heading": 96.43981838226318
+    }]
+}
+</code></pre>
+
+<p>You can expect the best-possible value for the accuracy to be around 5 meters.</p>
+
+<p><a name="captureinfofile"></a></p>
+
+<h3>Capture Info</h3>
+
+<p>This JSON file is used to store non-geographic related data about the capture. It is the source of the information that the <a href="../../Classes/STRCapture.html">STRCapture</a> class uses to produce instances of <a href="../../Classes/STRCapture.html">STRCapture</a> objects. Its properties are defined below:</p>
+
+<ul>
+<li>created_at
+
+<ul>
+<li>UNIX timestamp creation date</li>
+</ul>
+</li>
+<li>uploaded_at
+
+<ul>
+<li>UNIX timestamp for when the file was uploaded. This value is set to 0.0 by default when the capture is created.</li>
+</ul>
+</li>
+<li>media_type
+
+<ul>
+<li>String representation of the type of capture. This value can be either <code>video</code> or <code>image</code></li>
+</ul>
+</li>
+<li>token
+
+<ul>
+<li>String of characters that is unique to each capture. This is a SHA 2 hash.</li>
+</ul>
+</li>
+<li>title
+
+<ul>
+<li>String set to &ldquo;Untitled Track&rdquo; or similar by default. This string can be altered to any value &ndash; it can be user-defined.</li>
+</ul>
+</li>
+<li>coords
+
+<ul>
+<li>Latitude and longitude coordinates that represent the initial location for the capture. This is helpful for displaying pins for captures on a map, etc. It is easier and faster to parse through the capture info file to find this information than it is to get the first coordinates taken from the geo-data file.</li>
+</ul>
+</li>
+<li>heading
+
+<ul>
+<li>The initial heading of the capture in degrees. Commonly used to display pins on maps, etc.</li>
+</ul>
+</li>
+<li>geodata_file
+
+<ul>
+<li>The local path to the <a href="#geodatafile">Geo-Data file</a>, relative to /Documents/StraboCaptures.</li>
+</ul>
+</li>
+<li>thumbnail_file
+
+<ul>
+<li>The local path to the <a href="#thumbnailimagefile">Thumbnail Image file</a>, relative to /Documents/StraboCaptures.</li>
+</ul>
+</li>
+<li>media_file
+
+<ul>
+<li>The local path to the <a href="#mediafile">Media file</a>, relative to /Documents/StraboCaptures.</li>
+</ul>
+</li>
+</ul>
+
+
+<p>The contents of a capture-info file should look similar to the following:</p>
+
+<pre><code>{
+    "created_at": 1344352260,
+    "heading": 99.43981838226318,
+    "thumbnail_file": "338d2c23d2308bfced6117b3e9d63180d5594c8a9f5b8bd5a050914c239f358d\/338d2c23d2308bfced6117b3e9d63180d5594c8a9f5b8bd5a050914c239f358d.png",
+    "media_file": "338d2c23d2308bfced6117b3e9d63180d5594c8a9f5b8bd5a050914c239f358d\/338d2c23d2308bfced6117b3e9d63180d5594c8a9f5b8bd5a050914c239f358d.mov",
+    "media_type": "video",
+    "token": "338d2c23d2308bfced6117b3e9d63180d5594c8a9f5b8bd5a050914c239f358d",
+    "uploaded_at": 1344352275.333697,
+    "coords": [43.62538491719486, -72.51787712345703],
+    "geodata_file": "338d2c23d2308bfced6117b3e9d63180d5594c8a9f5b8bd5a050914c239f358d\/338d2c23d2308bfced6117b3e9d63180d5594c8a9f5b8bd5a050914c239f358d.json",
+    "orientation": "horizontal",
+    "title": "track"
+}
+</code></pre>
 
 <p><a name="recordingflow"></a></p>
 
