@@ -32,12 +32,26 @@
 	
 	
 	
+	<option value="tasks">Tasks</option>
 	
 	
 	
 	
 	
 	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/currentUnixTimestampNumber">&nbsp;&nbsp;&nbsp;&nbsp;+ currentUnixTimestampNumber</option>
+	
+	<option value="//api/name/currentUnixTimestampString">&nbsp;&nbsp;&nbsp;&nbsp;+ currentUnixTimestampString</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/isSameDayAsDate:">&nbsp;&nbsp;&nbsp;&nbsp;- isSameDayAsDate:</option>
 	
 	
 	
@@ -53,6 +67,9 @@
 
 
 
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
 
 
 
@@ -60,6 +77,21 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentUnixTimestampNumber">currentUnixTimestampNumber</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentUnixTimestampString">currentUnixTimestampString</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isSameDayAsDate:">isSameDayAsDate:</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -102,6 +134,40 @@
 					
 					
 					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/currentUnixTimestampString">+&nbsp;currentUnixTimestampString</a></code>
+		<span class="tooltip"><p>Generates the current unix time and returns a string value.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/currentUnixTimestampNumber">+&nbsp;currentUnixTimestampNumber</a></code>
+		<span class="tooltip"><p>Generates the curent unix time and returns a numerical value.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isSameDayAsDate:">&ndash;&nbsp;isSameDayAsDate:</a></code>
+		<span class="tooltip"><p>Compares two dates to determine if they fall on the same day.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
 					
 					
 					
@@ -109,6 +175,171 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/currentUnixTimestampNumber" title="currentUnixTimestampNumber"></a>
+	<h3 class="subsubtitle method-title">currentUnixTimestampNumber</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates the curent unix time and returns a numerical value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSNumber *)currentUnixTimestampNumber</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>NSNumber A numerical representation of the current unix time.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Generates the curent unix time and returns a numerical value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDate+Date_Utilities.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/currentUnixTimestampString" title="currentUnixTimestampString"></a>
+	<h3 class="subsubtitle method-title">currentUnixTimestampString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates the current unix time and returns a string value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)currentUnixTimestampString</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>NSString A string representation of the current unix time.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Generates the current unix time and returns a string value.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDate+Date_Utilities.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/isSameDayAsDate:" title="isSameDayAsDate:"></a>
+	<h3 class="subsubtitle method-title">isSameDayAsDate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Compares two dates to determine if they fall on the same day.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isSameDayAsDate:(NSDate *)<em>date</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>date</em></dt>
+			<dd><p>A date for comparison.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Compares two dates to determine if they fall on the same day.</p>
+
+<p>For example:</p>
+
+<pre><code>NSDate * oldDate = [NSDate dateWithTimeIntervalSince1970:1];
+NSDate * dateRightNow = [NSDate Date];
+
+// Compare the two dates to see if they are on the same day
+[oldDate isSameDayAsDate:dateRightNow]; // Returns NO
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDate+Date_Utilities.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 				</div>
@@ -121,7 +352,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-07)</span><br />
+						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

@@ -4,6 +4,7 @@ A_ORIGIN=../STRABO-MultiRecorder/build/Release-iphoneos/libSTRABO-MultiRecorder.
 H_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.h
 M_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.m
 STORYBOARD_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRMultiRecorderStoryboard.storyboard
+SETTINGS_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRSettings.plist
 PROJECT_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder.xcodeproj
 SOURCE=../src
 
@@ -21,7 +22,7 @@ echo "BUILD INFO | Writing documentation"
 
 appledoc ../STRABO-MultiRecorder/STRABO-MultiRecorder/.
 
-# Copy .h and storyboard files to the src folder
+# Copy .h, settings, and storyboard files to the src folder
 
 cp $A_ORIGIN $SOURCE
 echo -e  "\nWARNING | Please make sure that the .a file origin location is accurate."
@@ -30,6 +31,7 @@ echo "File location, .a: " $A_ORIGIN
 cp $H_ORIGIN $SOURCE
 # cp $M_ORIGIN $SOURCE
 cp $STORYBOARD_ORIGIN $SOURCE
+cp $SETTINGS_ORIGIN $SOURCE
 
 echo "BUILD INFO | All .h and .storyboard files copied to the source folder."
 

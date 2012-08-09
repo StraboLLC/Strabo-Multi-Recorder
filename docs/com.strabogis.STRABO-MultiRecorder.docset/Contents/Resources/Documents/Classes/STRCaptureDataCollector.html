@@ -44,9 +44,13 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/captureStillImageWithOrientation:">&nbsp;&nbsp;&nbsp;&nbsp;- captureStillImageWithOrientation:</option>
+	
 	<option value="//api/name/setCaptureQuality:">&nbsp;&nbsp;&nbsp;&nbsp;- setCaptureQuality:</option>
 	
 	<option value="//api/name/startCapturingVideoWithOrientation:">&nbsp;&nbsp;&nbsp;&nbsp;- startCapturingVideoWithOrientation:</option>
+	
+	<option value="//api/name/stopCapturingVideo">&nbsp;&nbsp;&nbsp;&nbsp;- stopCapturingVideo</option>
 	
 	
 	
@@ -80,9 +84,13 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/captureStillImageWithOrientation:">captureStillImageWithOrientation:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setCaptureQuality:">setCaptureQuality:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startCapturingVideoWithOrientation:">startCapturingVideoWithOrientation:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopCapturingVideo">stopCapturingVideo</a></span></li>
 	
 </ul></li>
 
@@ -157,7 +165,21 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/startCapturingVideoWithOrientation:">&ndash;&nbsp;startCapturingVideoWithOrientation:</a></code>
-		
+		<span class="tooltip"><p>Begin recording video to a temp video file with a specified orientation.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopCapturingVideo">&ndash;&nbsp;stopCapturingVideo</a></code>
+		<span class="tooltip"><p>Stop recording video to the temporary output file.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/captureStillImageWithOrientation:">&ndash;&nbsp;captureStillImageWithOrientation:</a></code>
+		<span class="tooltip"><p>Take a picture and save it to an output file in the temporary directory.</p></span>
 	</span>
 	
 	
@@ -177,6 +199,57 @@
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/captureStillImageWithOrientation:" title="captureStillImageWithOrientation:"></a>
+	<h3 class="subsubtitle method-title">captureStillImageWithOrientation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Take a picture and save it to an output file in the temporary directory.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)captureStillImageWithOrientation:(UIDeviceOrientation)<em>deviceOrientation</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deviceOrientation</em></dt>
+			<dd><p>The current orientation of the device when recording commences. This determines the orientation of both the final image file as well as the thumbnail.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Take a picture and save it to an output file in the temporary directory.</p><div class="warning"><p><strong>Warning:</strong> The orientation can only be an AVCaptureVideoOrientation. Device orientations like UIDeviceOrientationFaceDown are not accepted.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureDataCollector.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/setCaptureQuality:" title="setCaptureQuality:"></a>
@@ -235,17 +308,79 @@
 	
 	
 	
+	<div class="method-subsection brief-description">
+		<p>Begin recording video to a temp video file with a specified orientation.</p>
+	</div>		
+	
     
 
 	<div class="method-subsection method-declaration"><code>- (void)startCapturingVideoWithOrientation:(AVCaptureVideoOrientation)<em>deviceOrientation</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deviceOrientation</em></dt>
+			<dd><p>The current orientation of the device when recording commences. This determines the orientation of both the final video file as well as the thumbnail.</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
 	
 	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Begin recording video to a temp video file with a specified orientation.</p><div class="warning"><p><strong>Warning:</strong> The orientation can only be an AVCaptureVideoOrientation. Device orientations like UIDeviceOrientationFaceDown are not accepted.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureDataCollector.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopCapturingVideo" title="stopCapturingVideo"></a>
+	<h3 class="subsubtitle method-title">stopCapturingVideo</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stop recording video to the temporary output file.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopCapturingVideo</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Stop recording video to the temporary output file.</p>
+
+<p>Should be called after <a href="#//api/name/startCapturingVideoWithOrientation:">startCapturingVideoWithOrientation:</a> is called, although nothing bad will happen if you call it inadvertantly while a capture is not currently recording &ndash; no worries.</p>
+	</div>
 	
 	
 	
@@ -274,7 +409,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-07)</span><br />
+						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

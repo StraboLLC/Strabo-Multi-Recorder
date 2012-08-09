@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Upload_URL</key>
+	<dict>
+		<key>Base_URL</key>
+		<string>http://ns-api.herokuapp.com</string>
+		<key>API_URL</key>
+		<string>/upload</string>
+	</dict>
+	<key>Advanced_Logging</key>
+	<true/>
+</dict>
+</plist>
