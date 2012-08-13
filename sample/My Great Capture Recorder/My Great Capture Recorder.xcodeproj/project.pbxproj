@@ -19,6 +19,7 @@
 		9629ABFD15AB6B17004FB443 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABFC15AB6B17004FB443 /* QuartzCore.framework */; };
 		96488FF415BDAE77007AE1BC /* CapturesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */; };
 		96488FFB15BDC7D5007AE1BC /* CaptureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */; };
+		96ACBE8A15D942B100454DA3 /* PlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ACBE8915D942B100454DA3 /* PlaybackViewController.m */; };
 		96C500DE15C84FB500A63FC2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C500DD15C84FB500A63FC2 /* CoreMedia.framework */; };
 		96FB286D15D153B500BE00C2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FB286C15D153B500BE00C2 /* MainStoryboard.storyboard */; };
 		96FD434215D2FEC800644614 /* libSTRABO-MultiRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FD433415D2FEC800644614 /* libSTRABO-MultiRecorder.a */; };
@@ -46,6 +47,8 @@
 		96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapturesTableViewController.m; sourceTree = "<group>"; };
 		96488FF915BDC7D5007AE1BC /* CaptureDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureDetailViewController.h; sourceTree = "<group>"; };
 		96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureDetailViewController.m; sourceTree = "<group>"; };
+		96ACBE8815D942B100454DA3 /* PlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackViewController.h; sourceTree = "<group>"; };
+		96ACBE8915D942B100454DA3 /* PlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackViewController.m; sourceTree = "<group>"; };
 		96C500DD15C84FB500A63FC2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		96FB286C15D153B500BE00C2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		96FD433315D2FEC800644614 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 				96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */,
 				96488FF915BDC7D5007AE1BC /* CaptureDetailViewController.h */,
 				96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */,
+				96ACBE8815D942B100454DA3 /* PlaybackViewController.h */,
+				96ACBE8915D942B100454DA3 /* PlaybackViewController.m */,
 				96FB286C15D153B500BE00C2 /* MainStoryboard.storyboard */,
 				9629ABB715AB45BF004FB443 /* Supporting Files */,
 			);
@@ -237,6 +242,7 @@
 				9629ABC715AB45C0004FB443 /* RootViewController.m in Sources */,
 				96488FF415BDAE77007AE1BC /* CapturesTableViewController.m in Sources */,
 				96488FFB15BDC7D5007AE1BC /* CaptureDetailViewController.m in Sources */,
+				96ACBE8A15D942B100454DA3 /* PlaybackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

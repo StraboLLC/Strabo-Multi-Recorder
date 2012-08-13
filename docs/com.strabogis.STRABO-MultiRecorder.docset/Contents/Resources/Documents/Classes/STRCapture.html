@@ -46,6 +46,8 @@
 	
 	<option value="//api/name/geoDataPath">&nbsp;&nbsp;&nbsp;&nbsp;geoDataPath</option>
 	
+	<option value="//api/name/heading">&nbsp;&nbsp;&nbsp;&nbsp;heading</option>
+	
 	<option value="//api/name/latitude">&nbsp;&nbsp;&nbsp;&nbsp;latitude</option>
 	
 	<option value="//api/name/longitude">&nbsp;&nbsp;&nbsp;&nbsp;longitude</option>
@@ -71,10 +73,18 @@
 	
 	<option value="//api/name/captureFromFilesAtDirectory:">&nbsp;&nbsp;&nbsp;&nbsp;+ captureFromFilesAtDirectory:</option>
 	
+	<option value="//api/name/captureWithToken:">&nbsp;&nbsp;&nbsp;&nbsp;+ captureWithToken:</option>
+	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/geoDataPointTimestamps">&nbsp;&nbsp;&nbsp;&nbsp;- geoDataPointTimestamps</option>
+	
+	<option value="//api/name/geoDataPoints">&nbsp;&nbsp;&nbsp;&nbsp;- geoDataPoints</option>
+	
+	<option value="//api/name/hasBeenUploaded">&nbsp;&nbsp;&nbsp;&nbsp;- hasBeenUploaded</option>
 	
 	<option value="//api/name/save">&nbsp;&nbsp;&nbsp;&nbsp;- save</option>
 	
@@ -104,6 +114,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Class Methods">Class Methods</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Utilities">Utilities</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Editing Methods">Editing Methods</a></span></li>
 	
 </ul></li>
@@ -119,6 +131,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/creationDate">creationDate</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/geoDataPath">geoDataPath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/heading">heading</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/latitude">latitude</a></span></li>
 	
@@ -146,11 +160,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/captureFromFilesAtDirectory:">captureFromFilesAtDirectory:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/captureWithToken:">captureWithToken:</a></span></li>
+	
 </ul></li>
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/geoDataPointTimestamps">geoDataPointTimestamps</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/geoDataPoints">geoDataPoints</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasBeenUploaded">hasBeenUploaded</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save">save</a></span></li>
 	
@@ -218,6 +240,13 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/creationDate">&nbsp;&nbsp;creationDate</a></code>
+		<span class="tooltip"><p>Date when the capture was first taken.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
 						</ul>
 						
@@ -228,8 +257,8 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/creationDate">&nbsp;&nbsp;creationDate</a></code>
-		<span class="tooltip"><p>Date when the capture was first taken.</p></span>
+		<code><a href="#//api/name/heading">&nbsp;&nbsp;heading</a></code>
+		<span class="tooltip"><p>Initial heading of the capture.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -339,6 +368,42 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/captureFromFilesAtDirectory:">+&nbsp;captureFromFilesAtDirectory:</a></code>
 		<span class="tooltip"><p>Returns a new STRCapture object with the files at the directory specified.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/captureWithToken:">+&nbsp;captureWithToken:</a></code>
+		<span class="tooltip"><p>Retrieves the locally stored capture with the specified <a href="#//api/name/token">token</a> and returns a STRCapture object representing the capture.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Utilities" name="task_Utilities"></a>
+						<h3 class="subsubtitle task-title">Utilities</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasBeenUploaded">&ndash;&nbsp;hasBeenUploaded</a></code>
+		<span class="tooltip"><p>An easy to check to see if a capture has been uploaded.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/geoDataPointTimestamps">&ndash;&nbsp;geoDataPointTimestamps</a></code>
+		<span class="tooltip"><p>Gets an array of the timestamps that correspond to the geodata points associated with this track.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/geoDataPoints">&ndash;&nbsp;geoDataPoints</a></code>
+		<span class="tooltip"><p>Generates a dictionary of points information with timestamps as keys and geodata objects.</p></span>
 	</span>
 	
 	
@@ -479,6 +544,47 @@
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Path of the geo data file associated with this capture relative to the strabo captures directory.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/heading" title="heading"></a>
+	<h3 class="subsubtitle method-title">heading</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initial heading of the capture.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly) NSNumber *heading</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initial heading of the capture.</p><div class="warning"><p><strong>Warning:</strong> This value might not equate exactly to the first point in the geo-data file.</p></div>
 	</div>
 	
 	
@@ -920,7 +1026,63 @@
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Returns a new STRCapture object with the files at the directory specified.</p>
 
-<p>Notice that the capture directory is not the absolute path to the directory, but is rather the name of the directory containing the capture media files. For example, under the naming scheme as of July, 2012, the capture directory could be something like: @&ldquo;1342193443&rdquo;.</p>
+<p>Notice that the capture directory is not the absolute path to the directory, but is rather the name of the directory containing the capture media files relative to the &ldquo;StraboCaptures&rdquo; directory. <del>For example, under the naming scheme as of July, 2012, the capture directory could be something like: @&ldquo;1342193443&rdquo;.</del> For example under the naming scheme as of August, 2012, the capture directory could be something like "</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/captureWithToken:" title="captureWithToken:"></a>
+	<h3 class="subsubtitle method-title">captureWithToken:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves the locally stored capture with the specified <a href="#//api/name/token">token</a> and returns a STRCapture object representing the capture.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (STRCapture *)captureWithToken:(NSString *)<em>token</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>token</em></dt>
+			<dd><p>The <a href="#//api/name/token">token</a> for the capture that you wish to retrieve.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>STRCapture A new instance of a STRCapture object defined by the specified <a href="#//api/name/token">token</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Retrieves the locally stored capture with the specified <a href="#//api/name/token">token</a> and returns a STRCapture object representing the capture.</p>
 	</div>
 	
 	
@@ -944,6 +1106,152 @@
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/geoDataPointTimestamps" title="geoDataPointTimestamps"></a>
+	<h3 class="subsubtitle method-title">geoDataPointTimestamps</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets an array of the timestamps that correspond to the geodata points associated with this track.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)geoDataPointTimestamps</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>NSArray An array of NSNumbers, each of which represents a capture timestamp.</p>
+
+<p>Returns nil in the event of an error.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gets an array of the timestamps that correspond to the geodata points associated with this track.</p>
+
+<p>Generates an array of timestamps from the geodata associated with the track. Each timestamp corresponds to a bundle of geodata information that was recorded at that time relative to the start of a capture&rsquo;s recording.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/geoDataPoints" title="geoDataPoints"></a>
+	<h3 class="subsubtitle method-title">geoDataPoints</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates a dictionary of points information with timestamps as keys and geodata objects.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)geoDataPoints</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>NSDictionary A dictionary of key-value paris that correspond to geodata points collected during a capture. The keys correspond to timestamps and the values are arrays containing CLLocationCoordinate2D&rsquo;s at index 0 and NSNumber headings at index 1.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Generates a dictionary of points information with timestamps as keys and geodata objects.</p>
+
+<p>The returned dictionary contains keys of the same values as returned by <a href="#//api/name/geoDataPointTimestamps">geoDataPointTimestamps</a>. These keys correspond to NSArray objects. The first element of the array object is a CLLocationCoordinate2D. The second array element is a <a href="#//api/name/heading">heading</a>, represented by an NSNumber. This method essentially builds an object from the <a href="../docs/help/UnderlyingMechanics.html">geodata file</a> that you can handle easily.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasBeenUploaded" title="hasBeenUploaded"></a>
+	<h3 class="subsubtitle method-title">hasBeenUploaded</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An easy to check to see if a capture has been uploaded.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasBeenUploaded</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>BOOL Returns YES if the capture has been previously uploaded and NO if it has not.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>An easy to check to see if a capture has been uploaded.</p>
+
+<p>For more detailed information, check the <a href="#//api/name/uploadDate">uploadDate</a> property. This property will return nil if the file has not been uploaded. It should also give you a more precise date about when the file was uploaded.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/save" title="save"></a>
@@ -1006,7 +1314,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-10)</span><br />
+						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-13)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

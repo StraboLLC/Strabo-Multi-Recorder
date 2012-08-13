@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
 
 /**
@@ -22,6 +23,7 @@
     NSString * _captureInfoPath;
     NSDate * _creationDate;
     NSString * _geoDataPath;
+    NSNumber * _heading;
     NSNumber * _latitude;
     NSNumber * _longitude;
     NSString * _mediaPath;
@@ -38,14 +40,21 @@
  */
 @property(readonly)UIImage * thumbnailImage;
 
+/**
+ Date when the capture was first taken.
+ */
+@property(readonly)NSDate * creationDate;
+
 ///---------------------------------------------------------------------------------------
 /// @name Geodata
 ///---------------------------------------------------------------------------------------
 
 /**
- Date when the capture was first taken.
+ Initial heading of the capture.
+ 
+ @warning This value might not equate exactly to the first point in the geo-data file.
  */
-@property(readonly)NSDate * creationDate;
+@property(readonly)NSNumber * heading;
 
 /**
  Initial latitude of the capture.
@@ -134,11 +143,53 @@
 /**
  Returns a new STRCapture object with the files at the directory specified.
  
- Notice that the capture directory is not the absolute path to the directory, but is rather the name of the directory containing the capture media files. For example, under the naming scheme as of July, 2012, the capture directory could be something like: @"1342193443".
+ Notice that the capture directory is not the absolute path to the directory, but is rather the name of the directory containing the capture media files relative to the "StraboCaptures" directory. ~~For example, under the naming scheme as of July, 2012, the capture directory could be something like: @"1342193443".~~ For example under the naming scheme as of August, 2012, the capture directory could be something like "
  
  @param captureDirectory The name of the directory containing the capture media files.
  */
 +(STRCapture *)captureFromFilesAtDirectory:(NSString *)captureDirectory;
+
+/**
+ Retrieves the locally stored capture with the specified token and returns a STRCapture object representing the capture.
+ 
+ @param token The token for the capture that you wish to retrieve.
+ 
+ @return STRCapture A new instance of a STRCapture object defined by the specified token.
+ */
++(STRCapture *)captureWithToken:(NSString *)token;
+
+///---------------------------------------------------------------------------------------
+/// @name Utilities
+///---------------------------------------------------------------------------------------
+
+/**
+ An easy to check to see if a capture has been uploaded.
+ 
+ For more detailed information, check the uploadDate property. This property will return nil if the file has not been uploaded. It should also give you a more precise date about when the file was uploaded.
+ 
+ @return BOOL Returns YES if the capture has been previously uploaded and NO if it has not.
+ */
+-(BOOL)hasBeenUploaded;
+
+/**
+ Gets an array of the timestamps that correspond to the geodata points associated with this track.
+ 
+ Generates an array of timestamps from the geodata associated with the track. Each timestamp corresponds to a bundle of geodata information that was recorded at that time relative to the start of a capture's recording.
+ 
+ @return NSArray An array of NSNumbers, each of which represents a capture timestamp.
+ 
+ Returns nil in the event of an error.
+ */
+-(NSArray *)geoDataPointTimestamps;
+
+/**
+ Generates a dictionary of points information with timestamps as keys and geodata objects.
+ 
+ The returned dictionary contains keys of the same values as returned by geoDataPointTimestamps. These keys correspond to NSArray objects. The first element of the array object is a CLLocationCoordinate2D. The second array element is a heading, represented by an NSNumber. This method essentially builds an object from the [geodata file](UnderlyingMechanics) that you can handle easily.
+ 
+ @return NSDictionary A dictionary of key-value paris that correspond to geodata points collected during a capture. The keys correspond to timestamps and the values are arrays containing CLLocationCoordinate2D's at index 0 and NSNumber headings at index 1.
+ */
+-(NSDictionary *)geoDataPoints;
 
 ///---------------------------------------------------------------------------------------
 /// @name Editing Methods

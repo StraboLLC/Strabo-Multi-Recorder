@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "multi-recorder-SDK.h"
 
+#import "PlaybackViewController.h"
+
 @interface CaptureDetailViewController : UIViewController {
     // UI Elements
     IBOutlet UITextField * titleField;
@@ -26,6 +28,11 @@
  The STRCapture object associated with this detail view.
  */
 @property(nonatomic, strong)STRCapture * localCapture;
+
+/**
+ Loads the PlaybackViewController with the local capture and presents the view
+ */
+-(IBAction)playButtonWasPressed:(id)sender;
 
 /**
  An action called when the upload button is pressed.

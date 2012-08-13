@@ -60,6 +60,9 @@
 {
     [super viewDidLoad];
     titleField.delegate = self;
+    
+#warning Test Code Exists Below
+    [_localCapture geoDataPoints];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -80,6 +83,11 @@
 }
 
 #pragma mark - Button Handling
+
+-(IBAction)playButtonWasPressed:(id)sender {
+    PlaybackViewController * player = [self.storyboard instantiateViewControllerWithIdentifier:@"playbackViewController"];
+    [self.navigationController pushViewController:player animated:YES];
+}
 
 -(IBAction)uploadButtonWasPressed:(id)sender {
     // Upload the cature associated with this detail view
