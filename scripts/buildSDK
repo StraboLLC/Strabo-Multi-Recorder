@@ -1,57 +1,63 @@
 #!/bin/bash
 
-A_ORIGIN=../STRABO-MultiRecorder/build/Release-iphoneos/libSTRABO-MultiRecorder.a
-H_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.h
-M_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.m
-STORYBOARD_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRMultiRecorderStoryboard.storyboard
-SETTINGS_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRSettings.plist
-PROJECT_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder.xcodeproj
-SOURCE=../src
+if [ -d ../STRABO-MultiRecorder ]; then
 
-echo "
+    A_ORIGIN=../STRABO-MultiRecorder/build/Release-iphoneos/libSTRABO-MultiRecorder.a
+    H_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.h
+    M_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.m
+    STORYBOARD_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRMultiRecorderStoryboard.storyboard
+    SETTINGS_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRSettings.plist
+    PROJECT_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder.xcodeproj
+    SOURCE=../src
+
+    echo "
 
  *** PERFORMING BUILD ACTIONS *** 
 
 "
 
-echo "BUILD INFO | Building xcode project"
+    echo "BUILD INFO | Building xcode project"
 
-xcodebuild -project $PROJECT_ORIGIN
+    xcodebuild -project $PROJECT_ORIGIN
 
-echo "BUILD INFO | Writing documentation"
+    echo "BUILD INFO | Writing documentation"
 
-appledoc ../STRABO-MultiRecorder/STRABO-MultiRecorder/.
+    appledoc ../STRABO-MultiRecorder/STRABO-MultiRecorder/.
 
 # Copy .h, settings, and storyboard files to the src folder
 
-cp $A_ORIGIN $SOURCE
-echo -e  "\nWARNING | Please make sure that the .a file origin location is accurate."
-echo "File location, .a: " $A_ORIGIN
+    cp $A_ORIGIN $SOURCE
+    echo -e  "\nWARNING | Please make sure that the .a file origin location is accurate."
+    echo "File location, .a: " $A_ORIGIN
 
-cp $H_ORIGIN $SOURCE
+    cp $H_ORIGIN $SOURCE
 # cp $M_ORIGIN $SOURCE
-cp $STORYBOARD_ORIGIN $SOURCE
-cp $SETTINGS_ORIGIN $SOURCE
+    cp $STORYBOARD_ORIGIN $SOURCE
+    cp $SETTINGS_ORIGIN $SOURCE
 
-echo "BUILD INFO | All .h and .storyboard files copied to the source folder."
+    echo "BUILD INFO | All .h and .storyboard files copied to the source folder."
 
 # Copy docs to the docs folder
 
-DOCS_ORIGIN=/Users/tnbeatty/Library/Developer/Shared/Documentation/DocSets/com.strabogis.STRABO-MultiRecorder.docset
-DOCS_DEST=../docs
+    DOCS_ORIGIN=/Users/tnbeatty/Library/Developer/Shared/Documentation/DocSets/com.strabogis.STRABO-MultiRecorder.docset
+    DOCS_DEST=../docs
 
-cp -r $DOCS_ORIGIN $DOCS_DEST
+    cp -r $DOCS_ORIGIN $DOCS_DEST
 
-echo "BUILD INFO | Documentation copied to DOCS folder."
+    echo "BUILD INFO | Documentation copied to DOCS folder."
 
 # Copy docset to the local site directory for upload
 
-WEB_DOCS_ORIGIN=$DOCS_ORIGIN/Contents/Resources/Documents
-WEB_DOCS_DEST=~/Sites/mobile.strabo.co/docs/multirecorder/
+    WEB_DOCS_ORIGIN=$DOCS_ORIGIN/Contents/Resources/Documents
+    WEB_DOCS_DEST=~/Sites/mobile.strabo.co/docs/multirecorder/
 
-cp -r $WEB_DOCS_ORIGIN $WEB_DOCS_DEST
+    cp -r $WEB_DOCS_ORIGIN $WEB_DOCS_DEST
 
-echo "BUILD INFO | Documentation copied to local web server."
-echo "BUILD INFO | Documentation awaiting upload to mobile.strabo.co."
+    echo "BUILD INFO | Documentation copied to local web server."
+    echo "BUILD INFO | Documentation awaiting upload to mobile.strabo.co."
 
-echo ""
+    echo ""
+else
+    echo "This build script requires the presence of the source code files."
+    echo -e "Please clone the source code repository (if you have been granted access)\nand re-run this script."
+fi

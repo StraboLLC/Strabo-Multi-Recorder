@@ -61,8 +61,7 @@
     [super viewDidLoad];
     titleField.delegate = self;
     
-#warning Test Code Exists Below
-    [_localCapture geoDataPoints];
+//#warning Test Code Exists Below
 }
 
 -(void)viewWillAppear:(BOOL)animated {

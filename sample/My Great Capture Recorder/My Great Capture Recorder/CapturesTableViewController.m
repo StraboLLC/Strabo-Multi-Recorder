@@ -29,15 +29,14 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     // Load the contents of the list
     STRCaptureFileManager * captureFileManager = [STRCaptureFileManager defaultManager];
-    captureArray = [captureFileManager allCapturesSorted:YES];
+//    captureArray = [captureFileManager allCapturesSorted:YES];
+    captureArray = [captureFileManager recentCapturesWithLimit:@3]; // Not functional
+//    captureArray = [captureFileManager capturesOnDate:[NSDate date]]; // Not functional
     [self.tableView reloadData];
 }
 
@@ -50,16 +49,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    NSLog(@"Performing segue");
-//    if ([segue.identifier isEqualToString:@"detailSegue"]) {
-//        // Load the destination controller with the capture that was just selected from the table
-//        CaptureDetailViewController * detailViewController = segue.destinationViewController;
-//        NSLog(@"Loading capture info.");
-//        [detailViewController loadInfoForCapture:selectedCapture];
-//    }
-//}
 
 #pragma mark - Table view data source
 

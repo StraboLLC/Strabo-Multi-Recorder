@@ -86,6 +86,8 @@
 	
 	<option value="//api/name/hasBeenUploaded">&nbsp;&nbsp;&nbsp;&nbsp;- hasBeenUploaded</option>
 	
+	<option value="//api/name/initialLocation">&nbsp;&nbsp;&nbsp;&nbsp;- initialLocation</option>
+	
 	<option value="//api/name/save">&nbsp;&nbsp;&nbsp;&nbsp;- save</option>
 	
 	
@@ -114,7 +116,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Class Methods">Class Methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Utilities">Utilities</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Utility Methods">Utility Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Geo Data Methods">Geo Data Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Editing Methods">Editing Methods</a></span></li>
 	
@@ -173,6 +177,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/geoDataPoints">geoDataPoints</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasBeenUploaded">hasBeenUploaded</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initialLocation">initialLocation</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save">save</a></span></li>
 	
@@ -382,14 +388,29 @@
 						</ul>
 						
 						
-						<a title="Utilities" name="task_Utilities"></a>
-						<h3 class="subsubtitle task-title">Utilities</h3>
+						<a title="Utility Methods" name="task_Utility Methods"></a>
+						<h3 class="subsubtitle task-title">Utility Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/hasBeenUploaded">&ndash;&nbsp;hasBeenUploaded</a></code>
 		<span class="tooltip"><p>An easy to check to see if a capture has been uploaded.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Geo Data Methods" name="task_Geo Data Methods"></a>
+						<h3 class="subsubtitle task-title">Geo Data Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initialLocation">&ndash;&nbsp;initialLocation</a></code>
+		<span class="tooltip"><p>Returns a CLLocation object containing the initial <a href="#//api/name/latitude">latitude</a> and longtiude values of the capture.</p></span>
 	</span>
 	
 	
@@ -1178,6 +1199,8 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>NSDictionary A dictionary of key-value paris that correspond to geodata points collected during a capture. The keys correspond to timestamps and the values are arrays containing CLLocationCoordinate2D&rsquo;s at index 0 and NSNumber headings at index 1.</p>
+
+<p>Returns nil in the event of an error.</p>
 	</div>
 	
 	
@@ -1237,6 +1260,54 @@
 		<p>An easy to check to see if a capture has been uploaded.</p>
 
 <p>For more detailed information, check the <a href="#//api/name/uploadDate">uploadDate</a> property. This property will return nil if the file has not been uploaded. It should also give you a more precise date about when the file was uploaded.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCapture.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initialLocation" title="initialLocation"></a>
+	<h3 class="subsubtitle method-title">initialLocation</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a CLLocation object containing the initial <a href="#//api/name/latitude">latitude</a> and longtiude values of the capture.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CLLocation *)initialLocation</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>CLLocaiton The initial location of the capture.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a CLLocation object containing the initial <a href="#//api/name/latitude">latitude</a> and longtiude values of the capture.</p>
+
+<p>This method is helpful when dealing with maps and other iOS SDK classes that deal directly with CLLocation objects. Instead of working with a capture&rsquo;s <a href="#//api/name/latitude">latitude</a> and <a href="#//api/name/longitude">longitude</a> properties, you can access the initial location of the capture via this initialLocation method. Note that the CLLocation object returned by this method has nil attributes <code>altitude</code>, <code>horizontalAccuracy</code>, <code>verticalAccuracy</code> and <code>timestamp</code>. You should use the value returned to determine a 2D position in space only.</p>
 	</div>
 	
 	
@@ -1314,7 +1385,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-13)</span><br />
+						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-14)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						
