@@ -51,7 +51,7 @@
 	
 	<option value="//api/name/allCapturesSorted:">&nbsp;&nbsp;&nbsp;&nbsp;- allCapturesSorted:</option>
 	
-	<option value="//api/name/capturesOnDate:">&nbsp;&nbsp;&nbsp;&nbsp;- capturesOnDate:</option>
+	<option value="//api/name/capturesOnDate:sorted:">&nbsp;&nbsp;&nbsp;&nbsp;- capturesOnDate:sorted:</option>
 	
 	<option value="//api/name/deleteCapture:">&nbsp;&nbsp;&nbsp;&nbsp;- deleteCapture:</option>
 	
@@ -103,7 +103,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/allCapturesSorted:">allCapturesSorted:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/capturesOnDate:">capturesOnDate:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/capturesOnDate:sorted:">capturesOnDate:sorted:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteCapture:">deleteCapture:</a></span></li>
 	
@@ -199,7 +199,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/capturesOnDate:">&ndash;&nbsp;capturesOnDate:</a></code>
+		<code><a href="#//api/name/capturesOnDate:sorted:">&ndash;&nbsp;capturesOnDate:sorted:</a></code>
 		<span class="tooltip"><p>Searches for and returns captures taken on a given date.</p></span>
 	</span>
 	
@@ -359,8 +359,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/capturesOnDate:" title="capturesOnDate:"></a>
-	<h3 class="subsubtitle method-title">capturesOnDate:</h3>
+	<a name="//api/name/capturesOnDate:sorted:" title="capturesOnDate:sorted:"></a>
+	<h3 class="subsubtitle method-title">capturesOnDate:sorted:</h3>
 	
 	
 	
@@ -370,7 +370,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSArray *)capturesOnDate:(NSDate *)<em>date</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray *)capturesOnDate:(NSDate *)<em>date</em> sorted:(BOOL)<em>sorted</em></code></div>
 
     
 	
@@ -380,6 +380,11 @@
 		<dl class="argument-def parameter-def">
 			<dt><em>date</em></dt>
 			<dd><p>The date to match with the capture dates of the captures.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sorted</em></dt>
+			<dd><p>If you pass the value YES for this parameter, the captures are returned sorted by date captured with the most recent capture first. Passing nil or NO will result in possibly unsorted captures.</p></dd>
 		</dl>
 		
 	</div>

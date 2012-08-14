@@ -8,8 +8,11 @@
 
 #import "CapturesTableViewController.h"
 
-@interface CapturesTableViewController ()
-
+@interface CapturesTableViewController (InternalMethods)
+// Reloads the capture array from the file system
+// Should be called if there are any changes to the list of
+// captures (like additions or deletions).
+-(void)refreshCaptureArray;
 @end
 
 @implementation CapturesTableViewController
@@ -29,14 +32,10 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // Display an Edit button in the navigation bar for this view controller.
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    // Load the contents of the list
-    STRCaptureFileManager * captureFileManager = [STRCaptureFileManager defaultManager];
-//    captureArray = [captureFileManager allCapturesSorted:YES];
-    captureArray = [captureFileManager recentCapturesWithLimit:@3]; // Not functional
-//    captureArray = [captureFileManager capturesOnDate:[NSDate date]]; // Not functional
+    [self refreshCaptureArray];
     [self.tableView reloadData];
 }
 
@@ -78,44 +77,22 @@
     return cell;
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
+// Support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the capture associated with the row
+        STRCapture * captureToDelete = [captureArray objectAtIndex:[indexPath indexAtPosition:1]];
+        if ([[STRCaptureFileManager defaultManager] deleteCaptureWithToken:captureToDelete.token]) {
+            [self refreshCaptureArray];
+            // Delete the row from the data source
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+    }
+    // Don't support insertion of new rows - just deletion
+    //else if (editingStyle == UITableViewCellEditingStyleInsert) {
+    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    //}
+}
 
 #pragma mark - Table view delegate
 
@@ -127,6 +104,16 @@
     
     // Present the view controller
     [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+@end
+
+@implementation CapturesTableViewController (InternalMethods)
+
+-(void)refreshCaptureArray {
+    // Load the contents of the list
+    STRCaptureFileManager * captureFileManager = [STRCaptureFileManager defaultManager];
+    captureArray = [captureFileManager allCapturesSorted:YES];
 }
 
 @end
