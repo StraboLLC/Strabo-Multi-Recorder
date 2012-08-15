@@ -11,15 +11,18 @@
 
 #import "PlaybackViewController.h"
 
+#import "STRPlaybackViewController.h"
+
 @interface CaptureDetailViewController : UIViewController {
     // UI Elements
     IBOutlet UITextField * titleField;
     IBOutlet UILabel * dateLabel;
     IBOutlet UILabel * uploadSuccessLabel;
     IBOutlet UIButton * uploadButton;
+    IBOutlet UIButton * playButton;
     IBOutlet UIProgressView * progressView;
     IBOutlet UIImageView * thumbnailImage;
-    IBOutlet UILabel * tokenLabel;
+    IBOutlet UITextView * tokenTextView;
     
     STRCapture * _localCapture;
 }

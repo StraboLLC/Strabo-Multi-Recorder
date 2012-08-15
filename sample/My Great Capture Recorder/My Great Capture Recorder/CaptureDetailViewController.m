@@ -67,6 +67,13 @@
 -(void)viewWillAppear:(BOOL)animated {
     // Refresh all dynamic parts of the detail view
     [self refreshCaptureDetail];
+    
+    // Hide the play button if the capture is an image
+    if ([_localCapture.type isEqualToString:@"video"]) {
+        [playButton setHidden:NO];
+    } else {
+        [playButton setHidden:YES];
+    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -84,7 +91,8 @@
 #pragma mark - Button Handling
 
 -(IBAction)playButtonWasPressed:(id)sender {
-    PlaybackViewController * player = [self.storyboard instantiateViewControllerWithIdentifier:@"playbackViewController"];
+    //PlaybackViewController * player = [self.storyboard instantiateViewControllerWithIdentifier:@"playbackViewController"];
+    STRPlaybackViewController * player = [STRPlaybackViewController playbackViewControllerForCapture:_localCapture];
     [self.navigationController pushViewController:player animated:YES];
 }
 
@@ -154,7 +162,7 @@
     
     // Show the token for development purposes
     // You would not normally want to show this to the user
-    tokenLabel.text = _localCapture.token;
+    tokenTextView.text = _localCapture.token;
     
     // Set up a date formatter to beautify the NSDate from the capture object
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];

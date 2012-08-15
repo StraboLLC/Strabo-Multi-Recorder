@@ -19,12 +19,12 @@
 		9629ABFD15AB6B17004FB443 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABFC15AB6B17004FB443 /* QuartzCore.framework */; };
 		96488FF415BDAE77007AE1BC /* CapturesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */; };
 		96488FFB15BDC7D5007AE1BC /* CaptureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */; };
+		9654D71015DAD262003E17E8 /* libSTRABO-MultiRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9654D70115DAD262003E17E8 /* libSTRABO-MultiRecorder.a */; };
+		9654D71115DAD262003E17E8 /* STRMultiRecorderStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9654D70C15DAD262003E17E8 /* STRMultiRecorderStoryboard.storyboard */; };
+		9654D71215DAD262003E17E8 /* STRSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9654D70F15DAD262003E17E8 /* STRSettings.plist */; };
 		96ACBE8A15D942B100454DA3 /* PlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ACBE8915D942B100454DA3 /* PlaybackViewController.m */; };
 		96C500DE15C84FB500A63FC2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C500DD15C84FB500A63FC2 /* CoreMedia.framework */; };
 		96FB286D15D153B500BE00C2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FB286C15D153B500BE00C2 /* MainStoryboard.storyboard */; };
-		96FD434215D2FEC800644614 /* libSTRABO-MultiRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FD433415D2FEC800644614 /* libSTRABO-MultiRecorder.a */; };
-		96FD434315D2FEC800644614 /* STRMultiRecorderStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FD433F15D2FEC800644614 /* STRMultiRecorderStoryboard.storyboard */; };
-		96FD434415D2FEC800644614 /* STRSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96FD434115D2FEC800644614 /* STRSettings.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,25 +47,25 @@
 		96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapturesTableViewController.m; sourceTree = "<group>"; };
 		96488FF915BDC7D5007AE1BC /* CaptureDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureDetailViewController.h; sourceTree = "<group>"; };
 		96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureDetailViewController.m; sourceTree = "<group>"; };
+		9654D70115DAD262003E17E8 /* libSTRABO-MultiRecorder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSTRABO-MultiRecorder.a"; sourceTree = "<group>"; };
+		9654D70215DAD262003E17E8 /* multi-recorder-sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "multi-recorder-sdk.h"; sourceTree = "<group>"; };
+		9654D70315DAD262003E17E8 /* NSDate+Date_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Date_Utilities.h"; sourceTree = "<group>"; };
+		9654D70415DAD262003E17E8 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		9654D70515DAD262003E17E8 /* STRCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCapture.h; sourceTree = "<group>"; };
+		9654D70615DAD262003E17E8 /* STRCaptureDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureDataCollector.h; sourceTree = "<group>"; };
+		9654D70715DAD262003E17E8 /* STRCaptureFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureFileManager.h; sourceTree = "<group>"; };
+		9654D70815DAD262003E17E8 /* STRCaptureFileOrganizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureFileOrganizer.h; sourceTree = "<group>"; };
+		9654D70915DAD262003E17E8 /* STRCaptureUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureUploadManager.h; sourceTree = "<group>"; };
+		9654D70A15DAD262003E17E8 /* STRCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureViewController.h; sourceTree = "<group>"; };
+		9654D70B15DAD262003E17E8 /* STRGeoLocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRGeoLocationData.h; sourceTree = "<group>"; };
+		9654D70C15DAD262003E17E8 /* STRMultiRecorderStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = STRMultiRecorderStoryboard.storyboard; sourceTree = "<group>"; };
+		9654D70D15DAD262003E17E8 /* STRPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRPlaybackViewController.h; sourceTree = "<group>"; };
+		9654D70E15DAD262003E17E8 /* STRSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRSettings.h; sourceTree = "<group>"; };
+		9654D70F15DAD262003E17E8 /* STRSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = STRSettings.plist; sourceTree = "<group>"; };
 		96ACBE8815D942B100454DA3 /* PlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackViewController.h; sourceTree = "<group>"; };
 		96ACBE8915D942B100454DA3 /* PlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackViewController.m; sourceTree = "<group>"; };
 		96C500DD15C84FB500A63FC2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		96FB286C15D153B500BE00C2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		96FD433315D2FEC800644614 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		96FD433415D2FEC800644614 /* libSTRABO-MultiRecorder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSTRABO-MultiRecorder.a"; sourceTree = "<group>"; };
-		96FD433515D2FEC800644614 /* multi-recorder-sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "multi-recorder-sdk.h"; sourceTree = "<group>"; };
-		96FD433615D2FEC800644614 /* NSDate+Date_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Date_Utilities.h"; sourceTree = "<group>"; };
-		96FD433715D2FEC800644614 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		96FD433815D2FEC800644614 /* STRCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCapture.h; sourceTree = "<group>"; };
-		96FD433915D2FEC800644614 /* STRCaptureDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureDataCollector.h; sourceTree = "<group>"; };
-		96FD433A15D2FEC800644614 /* STRCaptureFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureFileManager.h; sourceTree = "<group>"; };
-		96FD433B15D2FEC800644614 /* STRCaptureFileOrganizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureFileOrganizer.h; sourceTree = "<group>"; };
-		96FD433C15D2FEC800644614 /* STRCaptureUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureUploadManager.h; sourceTree = "<group>"; };
-		96FD433D15D2FEC800644614 /* STRCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureViewController.h; sourceTree = "<group>"; };
-		96FD433E15D2FEC800644614 /* STRGeoLocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRGeoLocationData.h; sourceTree = "<group>"; };
-		96FD433F15D2FEC800644614 /* STRMultiRecorderStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = STRMultiRecorderStoryboard.storyboard; sourceTree = "<group>"; };
-		96FD434015D2FEC800644614 /* STRSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRSettings.h; sourceTree = "<group>"; };
-		96FD434115D2FEC800644614 /* STRSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = STRSettings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				9629ABFB15AB6AED004FB443 /* CoreLocation.framework in Frameworks */,
 				9629ABFD15AB6B17004FB443 /* QuartzCore.framework in Frameworks */,
 				96C500DE15C84FB500A63FC2 /* CoreMedia.framework in Frameworks */,
-				96FD434215D2FEC800644614 /* libSTRABO-MultiRecorder.a in Frameworks */,
+				9654D71015DAD262003E17E8 /* libSTRABO-MultiRecorder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +121,7 @@
 		9629ABB615AB45BF004FB443 /* My Great Capture Recorder */ = {
 			isa = PBXGroup;
 			children = (
-				96FD433215D2FEC800644614 /* src */,
+				9654D70015DAD262003E17E8 /* src */,
 				9629ABBF15AB45BF004FB443 /* AppDelegate.h */,
 				9629ABC015AB45BF004FB443 /* AppDelegate.m */,
 				9629ABC515AB45BF004FB443 /* RootViewController.h */,
@@ -149,24 +149,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		96FD433215D2FEC800644614 /* src */ = {
+		9654D70015DAD262003E17E8 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				96FD433315D2FEC800644614 /* Constants.h */,
-				96FD433415D2FEC800644614 /* libSTRABO-MultiRecorder.a */,
-				96FD433515D2FEC800644614 /* multi-recorder-sdk.h */,
-				96FD433615D2FEC800644614 /* NSDate+Date_Utilities.h */,
-				96FD433715D2FEC800644614 /* NSString+Hash.h */,
-				96FD433815D2FEC800644614 /* STRCapture.h */,
-				96FD433915D2FEC800644614 /* STRCaptureDataCollector.h */,
-				96FD433A15D2FEC800644614 /* STRCaptureFileManager.h */,
-				96FD433B15D2FEC800644614 /* STRCaptureFileOrganizer.h */,
-				96FD433C15D2FEC800644614 /* STRCaptureUploadManager.h */,
-				96FD433D15D2FEC800644614 /* STRCaptureViewController.h */,
-				96FD433E15D2FEC800644614 /* STRGeoLocationData.h */,
-				96FD433F15D2FEC800644614 /* STRMultiRecorderStoryboard.storyboard */,
-				96FD434015D2FEC800644614 /* STRSettings.h */,
-				96FD434115D2FEC800644614 /* STRSettings.plist */,
+				9654D70115DAD262003E17E8 /* libSTRABO-MultiRecorder.a */,
+				9654D70215DAD262003E17E8 /* multi-recorder-sdk.h */,
+				9654D70315DAD262003E17E8 /* NSDate+Date_Utilities.h */,
+				9654D70415DAD262003E17E8 /* NSString+Hash.h */,
+				9654D70515DAD262003E17E8 /* STRCapture.h */,
+				9654D70615DAD262003E17E8 /* STRCaptureDataCollector.h */,
+				9654D70715DAD262003E17E8 /* STRCaptureFileManager.h */,
+				9654D70815DAD262003E17E8 /* STRCaptureFileOrganizer.h */,
+				9654D70915DAD262003E17E8 /* STRCaptureUploadManager.h */,
+				9654D70A15DAD262003E17E8 /* STRCaptureViewController.h */,
+				9654D70B15DAD262003E17E8 /* STRGeoLocationData.h */,
+				9654D70C15DAD262003E17E8 /* STRMultiRecorderStoryboard.storyboard */,
+				9654D70D15DAD262003E17E8 /* STRPlaybackViewController.h */,
+				9654D70E15DAD262003E17E8 /* STRSettings.h */,
+				9654D70F15DAD262003E17E8 /* STRSettings.plist */,
 			);
 			name = src;
 			path = ../../../src;
@@ -225,8 +225,8 @@
 			files = (
 				9629ABBB15AB45BF004FB443 /* InfoPlist.strings in Resources */,
 				96FB286D15D153B500BE00C2 /* MainStoryboard.storyboard in Resources */,
-				96FD434315D2FEC800644614 /* STRMultiRecorderStoryboard.storyboard in Resources */,
-				96FD434415D2FEC800644614 /* STRSettings.plist in Resources */,
+				9654D71115DAD262003E17E8 /* STRMultiRecorderStoryboard.storyboard in Resources */,
+				9654D71215DAD262003E17E8 /* STRSettings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +312,7 @@
 					"-all_load",
 					"-ObjC",
 				);
-				PROVISIONING_PROFILE = "0CFBC1F3-618A-4AB2-9A48-DA75D8E5F1F0";
+				PROVISIONING_PROFILE = "3E1EE189-5091-4415-AC8B-44C7F3D3BEAF";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv7;
@@ -351,7 +351,7 @@
 					"\"$(SRCROOT)/../../src\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0CFBC1F3-618A-4AB2-9A48-DA75D8E5F1F0";
+				PROVISIONING_PROFILE = "3E1EE189-5091-4415-AC8B-44C7F3D3BEAF";
 				VALID_ARCHS = "armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};

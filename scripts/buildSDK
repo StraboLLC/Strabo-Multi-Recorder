@@ -3,6 +3,7 @@
 if [ -d ../STRABO-MultiRecorder ]; then
 
     A_ORIGIN=../STRABO-MultiRecorder/build/Release-iphoneos/libSTRABO-MultiRecorder.a
+#    H_ORIGIN=../STRABO-MultiRecorder/build/Release-iphoneos/include/STRABO-MultiRecorder/*.h
     H_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.h
     M_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.m
     STORYBOARD_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRMultiRecorderStoryboard.storyboard
@@ -23,6 +24,11 @@ if [ -d ../STRABO-MultiRecorder ]; then
     echo "BUILD INFO | Writing documentation"
 
     appledoc ../STRABO-MultiRecorder/STRABO-MultiRecorder/.
+
+# Delete everything from the current source src folder
+# so that the new build is purely a fresh copy
+    
+    rm $SOURCE/*
 
 # Copy .h, settings, and storyboard files to the src folder
 
