@@ -187,6 +187,8 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     // Hide the keyboard when the user presses the done button
+    [_localCapture save];
+    [self refreshCaptureDetail];
     [textField resignFirstResponder];
     return NO;
 }

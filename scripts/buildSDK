@@ -63,6 +63,10 @@ if [ -d ../STRABO-MultiRecorder ]; then
     echo "BUILD INFO | Documentation awaiting upload to mobile.strabo.co."
 
     echo ""
+
+    echo -e " *** BUILD COMPLETED AT: \c"; date;
+
+    echo ""
 else
     echo "This build script requires the presence of the source code files."
     echo -e "Please clone the source code repository (if you have been granted access)\nand re-run this script."
