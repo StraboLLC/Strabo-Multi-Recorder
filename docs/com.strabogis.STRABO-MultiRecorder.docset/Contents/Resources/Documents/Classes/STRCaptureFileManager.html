@@ -59,6 +59,8 @@
 	
 	<option value="//api/name/localCaptureCount">&nbsp;&nbsp;&nbsp;&nbsp;- localCaptureCount</option>
 	
+	<option value="//api/name/newCaptureWithImageAtPath:attributes:">&nbsp;&nbsp;&nbsp;&nbsp;- newCaptureWithImageAtPath:attributes:</option>
+	
 	<option value="//api/name/recentCapturesWithLimit:">&nbsp;&nbsp;&nbsp;&nbsp;- recentCapturesWithLimit:</option>
 	
 	
@@ -78,6 +80,8 @@
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Class Methods">Class Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Captures">Creating Captures</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Getting Local Captures">Getting Local Captures</a></span></li>
 	
@@ -110,6 +114,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteCaptureWithToken:">deleteCaptureWithToken:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localCaptureCount">localCaptureCount</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/newCaptureWithImageAtPath:attributes:">newCaptureWithImageAtPath:attributes:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recentCapturesWithLimit:">recentCapturesWithLimit:</a></span></li>
 	
@@ -172,6 +178,21 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/defaultManager">+&nbsp;defaultManager</a></code>
 		<span class="tooltip"><p>Creates an instance of a STRCaptureFileManager.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating Captures" name="task_Creating Captures"></a>
+						<h3 class="subsubtitle task-title">Creating Captures</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/newCaptureWithImageAtPath:attributes:">&ndash;&nbsp;newCaptureWithImageAtPath:attributes:</a></code>
+		<span class="tooltip"><p>Creates a capture object using the media specified.</p></span>
 	</span>
 	
 	
@@ -578,6 +599,111 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/newCaptureWithImageAtPath:attributes:" title="newCaptureWithImageAtPath:attributes:"></a>
+	<h3 class="subsubtitle method-title">newCaptureWithImageAtPath:attributes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a capture object using the media specified.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (STRCapture *)newCaptureWithImageAtPath:(NSString *)<em>mediaPath</em> attributes:(NSDictionary *)<em>attributes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>mediaPath</em></dt>
+			<dd><p>The path to the image on the device.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attributes</em></dt>
+			<dd><p>A dictionary containing attributes associated with the image. Dictionary keys are of type STRCaptureAttribute and the associated object values are described in the table above.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><a href="../Classes/STRCapture.html">STRCapture</a> A <a href="../Classes/STRCapture.html">STRCapture</a> object created from the new locally saved media file and associated data. Returns nil if there was an error.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a capture object using the media specified.</p>
+
+<p>This is useful when trying to create a capture object from an image in the photo roll or with an image captured with some other application. You pass a local path pointing to the JPG image, as well as a couple of attributes, and the method builds and saves a capture object locally.</p>
+
+<p>The attributes dictionary contains some geodata information about the image. This is the information that is used to populate local files from which the <a href="../Classes/STRCapture.html">STRCapture</a> object is built. This dictionary has a set of predefined keys of type STRCaptureAttribute. They are outlined below:</p>
+
+<table>
+    <tr style="font-weight: bold;">
+        <td>Key</td>
+        <td>Associated Value Object Type</td>
+        <td>Description</td>
+        <td>Required Value?</td>
+    </tr>
+    <tr>
+        <td>STRCaptureAttributeLatitude</td>
+        <td>NSNumber</td>
+        <td>The latitude value of the location of the image.</td>
+        <td>YES</td>
+    </tr>
+    <tr>
+        <td>STRCaptureAttributeLongitude</td>
+        <td>NSNumber</td>
+        <td>The longitude value of the location of the image.</td>
+        <td>YES</td>
+    </tr>
+    <tr>
+        <td>STRCaptureAttributeHeading</td>
+        <td>NSNumber</td>
+        <td>The heading value in degrees for the image.</td>
+        <td>NO: The heading is set to 0 degrees (North) if no other heading is provided.</td>
+    </tr>
+    <tr>
+        <td>STRCaptureAttributeDate</td>
+        <td>NSDate</td>
+        <td>The date that the image was taken.</td>
+        <td>NO: The date is set to the current date if no other date is provided.</td>
+    </tr>
+    <tr>
+        <td>STRCaptureAttributeTitle</td>
+        <td>NSString</td>
+        <td>The title of the image.</td>
+        <td>NO: The title is set to "Untitled Capture" if none is provided.</td>
+    </tr>
+</table>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureFileManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/recentCapturesWithLimit:" title="recentCapturesWithLimit:"></a>
 	<h3 class="subsubtitle method-title">recentCapturesWithLimit:</h3>
 	
@@ -646,7 +772,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-22)</span><br />
+						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						
