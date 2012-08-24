@@ -32,6 +32,11 @@
 @interface CaptureDetailViewController (InternalMethods)
 
 /**
+ Saves any updates made to the capture and refreshes the necessary elements to reflect these changes.
+ */
+-(void)saveCaptureUpdates;
+
+/**
  Updates the user interface elements uploadButton and uploadSuccessLabel to reflect current upload status.
  */
 -(void)refreshCaptureDetail;
@@ -147,6 +152,12 @@
 
 @implementation CaptureDetailViewController (InternalMethods)
 
+-(void)saveCaptureUpdates {
+    _localCapture.title = titleField.text;
+    [_localCapture save];
+    [self refreshCaptureDetail];
+}
+
 -(void)refreshCaptureDetail {
     if (!_localCapture.uploadDate) {
         // Hide the upload success label if the capture has not been uploaded.
@@ -187,9 +198,11 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     // Hide the keyboard when the user presses the done button
-    [_localCapture save];
-    [self refreshCaptureDetail];
     [textField resignFirstResponder];
+    
+    // Save updates to the title
+    [self saveCaptureUpdates];
+    
     return NO;
 }
 
