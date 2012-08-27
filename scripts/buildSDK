@@ -6,6 +6,7 @@ if [ -d ../STRABO-MultiRecorder ]; then
 #    H_ORIGIN=../STRABO-MultiRecorder/build/Release-iphoneos/include/STRABO-MultiRecorder/*.h
     H_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.h
     M_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.m
+    IMG_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/*.png
     STORYBOARD_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRMultiRecorderStoryboard.storyboard
     SETTINGS_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder/STRSettings.plist
     PROJECT_ORIGIN=../STRABO-MultiRecorder/STRABO-MultiRecorder.xcodeproj
@@ -38,6 +39,7 @@ if [ -d ../STRABO-MultiRecorder ]; then
 
     cp $H_ORIGIN $SOURCE
 # cp $M_ORIGIN $SOURCE
+    cp $IMG_ORIGIN $SOURCE
     cp $STORYBOARD_ORIGIN $SOURCE
     cp $SETTINGS_ORIGIN $SOURCE
 
