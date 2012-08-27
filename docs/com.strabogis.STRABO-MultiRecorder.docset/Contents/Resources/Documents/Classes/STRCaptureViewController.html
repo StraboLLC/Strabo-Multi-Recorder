@@ -44,6 +44,10 @@
 	
 	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
 	
+	<option value="//api/name/isReadyToRecord">&nbsp;&nbsp;&nbsp;&nbsp;isReadyToRecord</option>
+	
+	<option value="//api/name/isRecording">&nbsp;&nbsp;&nbsp;&nbsp;isRecording</option>
+	
 	<option value="//api/name/locationManager">&nbsp;&nbsp;&nbsp;&nbsp;locationManager</option>
 	
 	
@@ -93,6 +97,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/captureMode">captureMode</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isReadyToRecord">isReadyToRecord</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRecording">isRecording</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/locationManager">locationManager</a></span></li>
 	
@@ -170,9 +178,9 @@
 
 <h3>syncRecordUI</h3>
 
-<p>Syncs the user interface to reflect recording status. This method is called when video recording has started and again when it has ended (independent of success). In this method, you should update any user interface elements that respond to a change in the status of the instance variable isRecording.</p>
+<p>Syncs the user interface to reflect recording status. This method is called when video recording has started and again when it has ended (independent of success). In this method, you should update any user interface elements that respond to a change in the status of the instance variable <a href="#//api/name/isRecording">isRecording</a>.</p>
 
-<p>First, you should check isRecording to determine the recording state of the player. Next, you should update UI elements as necessary. For example, start or end record button flashing, enable or disable record buttons or capture mode selectors, etc.</p>
+<p>First, you should check <a href="#//api/name/isRecording">isRecording</a> to determine the recording state of the player. Next, you should update UI elements as necessary. For example, start or end record button flashing, enable or disable record buttons or capture mode selectors, etc.</p>
 
 <p><strong><em>STUB</em></strong> (good BBQ sauce)</p>
 					</div>
@@ -194,6 +202,20 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
 		<span class="tooltip"><p>The parent object.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isRecording">&nbsp;&nbsp;isRecording</a></code>
+		<span class="tooltip"><p>Set to YES when the system is recording a new capture.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isReadyToRecord">&nbsp;&nbsp;isReadyToRecord</a></code>
+		<span class="tooltip"><p>Set to YES when the system is ready to record a new capture. Set to NO when the system is processing and is unable to begin a new recording.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -330,6 +352,92 @@
 		<p>The parent object.</p>
 
 <p>The delegate of a STRCaptureViewController should implement a [STRCaptureViewControllerDelegate].</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isReadyToRecord" title="isReadyToRecord"></a>
+	<h3 class="subsubtitle method-title">isReadyToRecord</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set to YES when the system is ready to record a new capture. Set to NO when the system is processing and is unable to begin a new recording.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, setter=setIsReadyToRecord, :) BOOL isReadyToRecord</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set to YES when the system is ready to record a new capture. Set to NO when the system is processing and is unable to begin a new recording.</p>
+
+<p>You should always use the setter setIsReadyToRecord: to set the value of this property so that the proper methods are called for UI updates.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isRecording" title="isRecording"></a>
+	<h3 class="subsubtitle method-title">isRecording</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set to YES when the system is recording a new capture.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, setter=setIsRecording, :) BOOL isRecording</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set to YES when the system is recording a new capture.</p>
+
+<p>You should always use the setter setIsRecording: to set the value of this property so that the proper methods are called for UI updates.</p>
 	</div>
 	
 	
@@ -616,7 +724,7 @@ captureView.locationManager = myLocationManager;
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-24)</span><br />
+						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-27)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						
