@@ -17,15 +17,16 @@
 		9629ABF915AB6AE2004FB443 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABF815AB6AE2004FB443 /* AVFoundation.framework */; };
 		9629ABFB15AB6AED004FB443 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABFA15AB6AED004FB443 /* CoreLocation.framework */; };
 		9629ABFD15AB6B17004FB443 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9629ABFC15AB6B17004FB443 /* QuartzCore.framework */; };
+		9647B6C915ED07B000BF27D2 /* lenscapBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 9647B6B515ED07B000BF27D2 /* lenscapBottom.png */; };
+		9647B6CA15ED07B000BF27D2 /* lenscapBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9647B6B615ED07B000BF27D2 /* lenscapBottom@2x.png */; };
+		9647B6CB15ED07B000BF27D2 /* lenscapTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 9647B6B715ED07B000BF27D2 /* lenscapTop.png */; };
+		9647B6CC15ED07B000BF27D2 /* lenscapTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9647B6B815ED07B000BF27D2 /* lenscapTop@2x.png */; };
+		9647B6CD15ED07B000BF27D2 /* libSTRABO-MultiRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9647B6B915ED07B000BF27D2 /* libSTRABO-MultiRecorder.a */; };
+		9647B6CE15ED07B000BF27D2 /* STRMultiRecorderStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9647B6C415ED07B000BF27D2 /* STRMultiRecorderStoryboard.storyboard */; };
+		9647B6CF15ED07B000BF27D2 /* STRSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9647B6C815ED07B000BF27D2 /* STRSettings.plist */; };
 		96488FF415BDAE77007AE1BC /* CapturesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */; };
 		96488FFB15BDC7D5007AE1BC /* CaptureDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */; };
-		96532CA215EBF4990092BFB7 /* lenscapBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 96532C8E15EBF4990092BFB7 /* lenscapBottom.png */; };
-		96532CA315EBF4990092BFB7 /* lenscapBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96532C8F15EBF4990092BFB7 /* lenscapBottom@2x.png */; };
-		96532CA415EBF4990092BFB7 /* lenscapTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 96532C9015EBF4990092BFB7 /* lenscapTop.png */; };
-		96532CA515EBF4990092BFB7 /* lenscapTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96532C9115EBF4990092BFB7 /* lenscapTop@2x.png */; };
-		96532CA615EBF4990092BFB7 /* libSTRABO-MultiRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96532C9215EBF4990092BFB7 /* libSTRABO-MultiRecorder.a */; };
-		96532CA715EBF4990092BFB7 /* STRMultiRecorderStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96532C9D15EBF4990092BFB7 /* STRMultiRecorderStoryboard.storyboard */; };
-		96532CA815EBF4990092BFB7 /* STRSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96532CA115EBF4990092BFB7 /* STRSettings.plist */; };
+		9672BC1E15EC69F500291A3A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9672BC1D15EC69F500291A3A /* MapKit.framework */; };
 		96ACBE8A15D942B100454DA3 /* PlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ACBE8915D942B100454DA3 /* PlaybackViewController.m */; };
 		96C500DE15C84FB500A63FC2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C500DD15C84FB500A63FC2 /* CoreMedia.framework */; };
 		96FB286D15D153B500BE00C2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FB286C15D153B500BE00C2 /* MainStoryboard.storyboard */; };
@@ -47,30 +48,31 @@
 		9629ABF815AB6AE2004FB443 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9629ABFA15AB6AED004FB443 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9629ABFC15AB6B17004FB443 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9647B6B515ED07B000BF27D2 /* lenscapBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenscapBottom.png; sourceTree = "<group>"; };
+		9647B6B615ED07B000BF27D2 /* lenscapBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lenscapBottom@2x.png"; sourceTree = "<group>"; };
+		9647B6B715ED07B000BF27D2 /* lenscapTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenscapTop.png; sourceTree = "<group>"; };
+		9647B6B815ED07B000BF27D2 /* lenscapTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lenscapTop@2x.png"; sourceTree = "<group>"; };
+		9647B6B915ED07B000BF27D2 /* libSTRABO-MultiRecorder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSTRABO-MultiRecorder.a"; sourceTree = "<group>"; };
+		9647B6BA15ED07B000BF27D2 /* multi-recorder-sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "multi-recorder-sdk.h"; sourceTree = "<group>"; };
+		9647B6BB15ED07B000BF27D2 /* NSDate+Date_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Date_Utilities.h"; sourceTree = "<group>"; };
+		9647B6BC15ED07B000BF27D2 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		9647B6BD15ED07B000BF27D2 /* STRCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCapture.h; sourceTree = "<group>"; };
+		9647B6BE15ED07B000BF27D2 /* STRCaptureDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureDataCollector.h; sourceTree = "<group>"; };
+		9647B6BF15ED07B000BF27D2 /* STRCaptureFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureFileManager.h; sourceTree = "<group>"; };
+		9647B6C015ED07B000BF27D2 /* STRCaptureFileOrganizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureFileOrganizer.h; sourceTree = "<group>"; };
+		9647B6C115ED07B000BF27D2 /* STRCaptureUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureUploadManager.h; sourceTree = "<group>"; };
+		9647B6C215ED07B000BF27D2 /* STRCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureViewController.h; sourceTree = "<group>"; };
+		9647B6C315ED07B000BF27D2 /* STRGeoLocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRGeoLocationData.h; sourceTree = "<group>"; };
+		9647B6C415ED07B000BF27D2 /* STRMultiRecorderStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = STRMultiRecorderStoryboard.storyboard; sourceTree = "<group>"; };
+		9647B6C515ED07B000BF27D2 /* STRPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRPlaybackViewController.h; sourceTree = "<group>"; };
+		9647B6C615ED07B000BF27D2 /* STRPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRPlayerView.h; sourceTree = "<group>"; };
+		9647B6C715ED07B000BF27D2 /* STRSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRSettings.h; sourceTree = "<group>"; };
+		9647B6C815ED07B000BF27D2 /* STRSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = STRSettings.plist; sourceTree = "<group>"; };
 		96488FF215BDAE77007AE1BC /* CapturesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapturesTableViewController.h; sourceTree = "<group>"; };
 		96488FF315BDAE77007AE1BC /* CapturesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapturesTableViewController.m; sourceTree = "<group>"; };
 		96488FF915BDC7D5007AE1BC /* CaptureDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureDetailViewController.h; sourceTree = "<group>"; };
 		96488FFA15BDC7D5007AE1BC /* CaptureDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureDetailViewController.m; sourceTree = "<group>"; };
-		96532C8E15EBF4990092BFB7 /* lenscapBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenscapBottom.png; sourceTree = "<group>"; };
-		96532C8F15EBF4990092BFB7 /* lenscapBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lenscapBottom@2x.png"; sourceTree = "<group>"; };
-		96532C9015EBF4990092BFB7 /* lenscapTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lenscapTop.png; sourceTree = "<group>"; };
-		96532C9115EBF4990092BFB7 /* lenscapTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lenscapTop@2x.png"; sourceTree = "<group>"; };
-		96532C9215EBF4990092BFB7 /* libSTRABO-MultiRecorder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSTRABO-MultiRecorder.a"; sourceTree = "<group>"; };
-		96532C9315EBF4990092BFB7 /* multi-recorder-sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "multi-recorder-sdk.h"; sourceTree = "<group>"; };
-		96532C9415EBF4990092BFB7 /* NSDate+Date_Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Date_Utilities.h"; sourceTree = "<group>"; };
-		96532C9515EBF4990092BFB7 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		96532C9615EBF4990092BFB7 /* STRCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCapture.h; sourceTree = "<group>"; };
-		96532C9715EBF4990092BFB7 /* STRCaptureDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureDataCollector.h; sourceTree = "<group>"; };
-		96532C9815EBF4990092BFB7 /* STRCaptureFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureFileManager.h; sourceTree = "<group>"; };
-		96532C9915EBF4990092BFB7 /* STRCaptureFileOrganizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureFileOrganizer.h; sourceTree = "<group>"; };
-		96532C9A15EBF4990092BFB7 /* STRCaptureUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureUploadManager.h; sourceTree = "<group>"; };
-		96532C9B15EBF4990092BFB7 /* STRCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRCaptureViewController.h; sourceTree = "<group>"; };
-		96532C9C15EBF4990092BFB7 /* STRGeoLocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRGeoLocationData.h; sourceTree = "<group>"; };
-		96532C9D15EBF4990092BFB7 /* STRMultiRecorderStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = STRMultiRecorderStoryboard.storyboard; sourceTree = "<group>"; };
-		96532C9E15EBF4990092BFB7 /* STRPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRPlaybackViewController.h; sourceTree = "<group>"; };
-		96532C9F15EBF4990092BFB7 /* STRPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRPlayerView.h; sourceTree = "<group>"; };
-		96532CA015EBF4990092BFB7 /* STRSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRSettings.h; sourceTree = "<group>"; };
-		96532CA115EBF4990092BFB7 /* STRSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = STRSettings.plist; sourceTree = "<group>"; };
+		9672BC1D15EC69F500291A3A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		96ACBE8815D942B100454DA3 /* PlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackViewController.h; sourceTree = "<group>"; };
 		96ACBE8915D942B100454DA3 /* PlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackViewController.m; sourceTree = "<group>"; };
 		96C500DD15C84FB500A63FC2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -89,7 +91,8 @@
 				9629ABFB15AB6AED004FB443 /* CoreLocation.framework in Frameworks */,
 				9629ABFD15AB6B17004FB443 /* QuartzCore.framework in Frameworks */,
 				96C500DE15C84FB500A63FC2 /* CoreMedia.framework in Frameworks */,
-				96532CA615EBF4990092BFB7 /* libSTRABO-MultiRecorder.a in Frameworks */,
+				9672BC1E15EC69F500291A3A /* MapKit.framework in Frameworks */,
+				9647B6CD15ED07B000BF27D2 /* libSTRABO-MultiRecorder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +119,7 @@
 		9629ABAF15AB45BF004FB443 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9672BC1D15EC69F500291A3A /* MapKit.framework */,
 				96C500DD15C84FB500A63FC2 /* CoreMedia.framework */,
 				9629ABFC15AB6B17004FB443 /* QuartzCore.framework */,
 				9629ABFA15AB6AED004FB443 /* CoreLocation.framework */,
@@ -130,7 +134,7 @@
 		9629ABB615AB45BF004FB443 /* My Great Capture Recorder */ = {
 			isa = PBXGroup;
 			children = (
-				96532C8D15EBF4990092BFB7 /* src */,
+				9647B6B415ED07B000BF27D2 /* src */,
 				9629ABBF15AB45BF004FB443 /* AppDelegate.h */,
 				9629ABC015AB45BF004FB443 /* AppDelegate.m */,
 				9629ABC515AB45BF004FB443 /* RootViewController.h */,
@@ -158,29 +162,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		96532C8D15EBF4990092BFB7 /* src */ = {
+		9647B6B415ED07B000BF27D2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				96532C8E15EBF4990092BFB7 /* lenscapBottom.png */,
-				96532C8F15EBF4990092BFB7 /* lenscapBottom@2x.png */,
-				96532C9015EBF4990092BFB7 /* lenscapTop.png */,
-				96532C9115EBF4990092BFB7 /* lenscapTop@2x.png */,
-				96532C9215EBF4990092BFB7 /* libSTRABO-MultiRecorder.a */,
-				96532C9315EBF4990092BFB7 /* multi-recorder-sdk.h */,
-				96532C9415EBF4990092BFB7 /* NSDate+Date_Utilities.h */,
-				96532C9515EBF4990092BFB7 /* NSString+Hash.h */,
-				96532C9615EBF4990092BFB7 /* STRCapture.h */,
-				96532C9715EBF4990092BFB7 /* STRCaptureDataCollector.h */,
-				96532C9815EBF4990092BFB7 /* STRCaptureFileManager.h */,
-				96532C9915EBF4990092BFB7 /* STRCaptureFileOrganizer.h */,
-				96532C9A15EBF4990092BFB7 /* STRCaptureUploadManager.h */,
-				96532C9B15EBF4990092BFB7 /* STRCaptureViewController.h */,
-				96532C9C15EBF4990092BFB7 /* STRGeoLocationData.h */,
-				96532C9D15EBF4990092BFB7 /* STRMultiRecorderStoryboard.storyboard */,
-				96532C9E15EBF4990092BFB7 /* STRPlaybackViewController.h */,
-				96532C9F15EBF4990092BFB7 /* STRPlayerView.h */,
-				96532CA015EBF4990092BFB7 /* STRSettings.h */,
-				96532CA115EBF4990092BFB7 /* STRSettings.plist */,
+				9647B6B515ED07B000BF27D2 /* lenscapBottom.png */,
+				9647B6B615ED07B000BF27D2 /* lenscapBottom@2x.png */,
+				9647B6B715ED07B000BF27D2 /* lenscapTop.png */,
+				9647B6B815ED07B000BF27D2 /* lenscapTop@2x.png */,
+				9647B6B915ED07B000BF27D2 /* libSTRABO-MultiRecorder.a */,
+				9647B6BA15ED07B000BF27D2 /* multi-recorder-sdk.h */,
+				9647B6BB15ED07B000BF27D2 /* NSDate+Date_Utilities.h */,
+				9647B6BC15ED07B000BF27D2 /* NSString+Hash.h */,
+				9647B6BD15ED07B000BF27D2 /* STRCapture.h */,
+				9647B6BE15ED07B000BF27D2 /* STRCaptureDataCollector.h */,
+				9647B6BF15ED07B000BF27D2 /* STRCaptureFileManager.h */,
+				9647B6C015ED07B000BF27D2 /* STRCaptureFileOrganizer.h */,
+				9647B6C115ED07B000BF27D2 /* STRCaptureUploadManager.h */,
+				9647B6C215ED07B000BF27D2 /* STRCaptureViewController.h */,
+				9647B6C315ED07B000BF27D2 /* STRGeoLocationData.h */,
+				9647B6C415ED07B000BF27D2 /* STRMultiRecorderStoryboard.storyboard */,
+				9647B6C515ED07B000BF27D2 /* STRPlaybackViewController.h */,
+				9647B6C615ED07B000BF27D2 /* STRPlayerView.h */,
+				9647B6C715ED07B000BF27D2 /* STRSettings.h */,
+				9647B6C815ED07B000BF27D2 /* STRSettings.plist */,
 			);
 			name = src;
 			path = ../../../src;
@@ -239,12 +243,12 @@
 			files = (
 				9629ABBB15AB45BF004FB443 /* InfoPlist.strings in Resources */,
 				96FB286D15D153B500BE00C2 /* MainStoryboard.storyboard in Resources */,
-				96532CA215EBF4990092BFB7 /* lenscapBottom.png in Resources */,
-				96532CA315EBF4990092BFB7 /* lenscapBottom@2x.png in Resources */,
-				96532CA415EBF4990092BFB7 /* lenscapTop.png in Resources */,
-				96532CA515EBF4990092BFB7 /* lenscapTop@2x.png in Resources */,
-				96532CA715EBF4990092BFB7 /* STRMultiRecorderStoryboard.storyboard in Resources */,
-				96532CA815EBF4990092BFB7 /* STRSettings.plist in Resources */,
+				9647B6C915ED07B000BF27D2 /* lenscapBottom.png in Resources */,
+				9647B6CA15ED07B000BF27D2 /* lenscapBottom@2x.png in Resources */,
+				9647B6CB15ED07B000BF27D2 /* lenscapTop.png in Resources */,
+				9647B6CC15ED07B000BF27D2 /* lenscapTop@2x.png in Resources */,
+				9647B6CE15ED07B000BF27D2 /* STRMultiRecorderStoryboard.storyboard in Resources */,
+				9647B6CF15ED07B000BF27D2 /* STRSettings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +352,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../src\"",
-					"\"$(SRCROOT)/My Great Capture Recorder/src\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6922FBC3-B9E2-4D95-99D7-4EB627228122";
@@ -368,7 +371,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../src\"",
-					"\"$(SRCROOT)/My Great Capture Recorder/src\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3E1EE189-5091-4415-AC8B-44C7F3D3BEAF";
