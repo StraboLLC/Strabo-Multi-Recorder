@@ -1,4 +1,4 @@
-STRABO-MultiRecorder Source
+STRABO-MultiRecorder SDK 1.0.2
 ===
 
 Proprietary and Confidential
@@ -7,7 +7,7 @@ Created by Nate Beatty | Copyright (c) Strabo, LLC 2012
 
 ###Important Note:
 
-The current version is unstable and is constantly being updated. A stable version will be released on 8/31/12. Please expect errors and changes. Frequently update to the latest version and review the documentation for any changes that may have been made. Detailed changelogs will not be written until after the stable version release.
+The current version on the master branch of this repository is stable. Expect bugfixes, but no new methods or alteration of public methods. Please notify the developers of any bugs that you may find.
 
 Tutorial
 ---
