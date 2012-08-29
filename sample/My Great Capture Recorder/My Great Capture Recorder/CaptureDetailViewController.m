@@ -96,9 +96,11 @@
 #pragma mark - Button Handling
 
 -(IBAction)playButtonWasPressed:(id)sender {
-    //PlaybackViewController * player = [self.storyboard instantiateViewControllerWithIdentifier:@"playbackViewController"];
-    STRPlaybackViewController * player = [STRPlaybackViewController playbackViewControllerForCapture:_localCapture];
-    [self.navigationController pushViewController:player animated:YES];
+    
+    // SUPPORT FOR AN EXPERIMENTAL PLAYER: PLEASE DISREGARD
+//    //PlaybackViewController * player = [self.storyboard instantiateViewControllerWithIdentifier:@"playbackViewController"];
+//    STRPlaybackViewController * player = [STRPlaybackViewController playbackViewControllerForCapture:_localCapture];
+//    [self.navigationController pushViewController:player animated:YES];
 }
 
 -(IBAction)uploadButtonWasPressed:(id)sender {

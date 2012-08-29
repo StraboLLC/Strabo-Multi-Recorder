@@ -9,10 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "multi-recorder-SDK.h"
 
-#import "PlaybackViewController.h"
-
-#import "STRPlaybackViewController.h"
-
 @interface CaptureDetailViewController : UIViewController {
     // UI Elements
     IBOutlet UITextField * titleField;

@@ -70,6 +70,8 @@
 	
 	<option value="//api/name/recordButtonWasPressed:">&nbsp;&nbsp;&nbsp;&nbsp;- recordButtonWasPressed:</option>
 	
+	<option value="//api/name/setCaptureQuality:">&nbsp;&nbsp;&nbsp;&nbsp;- setCaptureQuality:</option>
+	
 	
 	
 </select>
@@ -85,6 +87,10 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Class Methods">Class Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Utilities">Utilities</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Button Handling">Button Handling</a></span></li>
 	
@@ -127,6 +133,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/doneButtonWasPressed:">doneButtonWasPressed:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recordButtonWasPressed:">recordButtonWasPressed:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setCaptureQuality:">setCaptureQuality:</a></span></li>
 	
 </ul></li>
 
@@ -176,6 +184,8 @@
 <pre><code>-(void)syncRecordUI;
 -(void)syncSelectorUI;
 -(void)imageCaptureHandleUI;
+-(void)updateInterfaceToReflectOrientationChange; 
+-(void)updateGeoIndicatorUI;
 </code></pre>
 
 <p>An overview of the methods to override:</p>
@@ -184,9 +194,42 @@
 
 <p>Syncs the user interface to reflect recording status. This method is called when video recording has started and again when it has ended (independent of success). In this method, you should update any user interface elements that respond to a change in the status of the instance variable <a href="#//api/name/isRecording">isRecording</a>.</p>
 
-<p>First, you should check <a href="#//api/name/isRecording">isRecording</a> to determine the recording state of the player. Next, you should update UI elements as necessary. For example, start or end record button flashing, enable or disable record buttons or capture mode selectors, etc.</p>
+<p>First, you should check the instance variables <code>_</code>isRecording<code></code> and <code>_</code>isReadyToRecord<code></code> to determine the recording state of the player. Next, you should update UI elements as necessary. For example, start or end a flashing recording button, enable or disable record buttons or capture mode selectors, etc, start or stop an activity indicator to indicate that the player is not ready to record.</p>
 
-<p><strong><em>STUB</em></strong> (good BBQ sauce)</p>
+<p>This method is called anytime either <code>_</code>isRecording<code></code> or <code>_</code>isReadyToRecord<code></code> changes.</p>
+
+<h3>syncSelectorUI</h3>
+
+<p>Syncs the user interface to reflect the current capture mode. You should check the <code>_</code>captureMode<code></code> instance variable (it will be set to a STRCaptureModeState) and update your user interface accordingly.</p>
+
+<p>For example, if you are using a segmented control or a switch that allows the user to change between capture modes, you might override this method in your subclass to change the image on the record button from a camera to a video recorder or vice versa.</p>
+
+<h3>imageCaptureHandleUI</h3>
+
+<p>Provides some sort of feedback to the user when an image is captured. This method is called exactly when a still image is captured.</p>
+
+<p>The default behavior is to display a flash over the screen. You could change the flash behavior by overriding this method and providing your own animation.</p>
+
+<h3>updateInterfaceToReflectOrientationChange</h3>
+
+<p>Called whenever the device rotates. To avoid supporting traditional device rotations with rearranged views, this method provides feedback whenever the device is rotated.</p>
+
+<p>You would choose to subclass this method if you would like to rotate on-screen UI elements when the device is rotated. For example, you could rotate a camera image on your record button so that it always remains face-up.</p>
+
+<p>When subclassing this method, first check the instance variable <code>_</code>currentOrientation<code></code>, which will be set to a UIDeviceOrientation. Then, update any necessary user interface elements appropriately.</p>
+
+<h3>updateGeoIndicatorUI</h3>
+
+<p>Called whenever the CLLocationManager changes its location, heading, or accuracy.</p>
+
+<p>If you are displaying an accuracy indicator, compass bearing, or other location indicator, you may want to override this method.</p>
+
+<p>You should check the <code>_</code>locationManager<code></code>, which contains the current location information, to get any information that you need to update your location UI elements.</p>
+
+<p>For example, you can get the current location accuracy in meters with the following line of code:</p>
+
+<pre><code>CLLocationAccuracy currentAccuracy = [[_locationManager location] horizontalAccuracy];
+</code></pre>
 					</div>
 					
 					
@@ -244,17 +287,40 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Class Methods" name="task_Class Methods"></a>
+						<h3 class="subsubtitle task-title">Class Methods</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/captureManager">+&nbsp;captureManager</a></code>
 		<span class="tooltip"><p>Returns a new STRCaptureViewControllre object.</p></span>
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Utilities" name="task_Utilities"></a>
+						<h3 class="subsubtitle task-title">Utilities</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/deviceDidRotate">&ndash;&nbsp;deviceDidRotate</a></code>
 		<span class="tooltip"><p>Called to handle rotation events without updating UIInterfaceOrientation.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setCaptureQuality:">&ndash;&nbsp;setCaptureQuality:</a></code>
+		<span class="tooltip"><p>Resets the capture quality to the desired setting.</p></span>
 	</span>
 	
 	
@@ -767,6 +833,59 @@ captureView.locationManager = myLocationManager;
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/setCaptureQuality:" title="setCaptureQuality:"></a>
+	<h3 class="subsubtitle method-title">setCaptureQuality:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Resets the capture quality to the desired setting.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setCaptureQuality:(NSString *)<em>captureSessionPreset</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>NSString</em></dt>
+			<dd><p>An AVCaptureSessionPreset, as defined in <code>AVCaptureSession.h</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Resets the capture quality to the desired setting.</p>
+
+<p>Alters the associated instance of <a href="../Classes/STRCaptureDataCollector.html">STRCaptureDataCollector</a> so that it records video at the quality set by the parameter. The capture qualities are defined in <code>AVCaptureSession.h</code> in the AVFoundation framework.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">STRCaptureViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -780,7 +899,7 @@ captureView.locationManager = myLocationManager;
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-28)</span><br />
+						<p><span class="copyright">&copy; 2012 Strabo, LLC. All rights reserved. (Last updated: 2012-08-29)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

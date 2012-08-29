@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9ZV-fw-1z4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9ZV-fw-1z4">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
@@ -204,45 +205,6 @@
             </objects>
             <point key="canvasLocation" x="1595" y="29"/>
         </scene>
-        <!--Playback View Controller-->
-        <scene sceneID="W1o-dW-gO4">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f1C-qQ-U9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="playbackViewController" id="hUa-3F-DC9" customClass="PlaybackViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="usM-ph-FwB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="wnT-VH-9gf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="bcB-rL-Hzf">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gTL-AW-Kt6"/>
-                                    <barButtonItem title="&lt;&lt;" id="BOO-1s-oaE"/>
-                                    <barButtonItem title="Play" id="QK1-vi-yVp"/>
-                                    <barButtonItem title=">>" id="16N-hx-Emr"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pSm-L9-1Uk"/>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="mainView" destination="wnT-VH-9gf" id="psa-UE-Fdh"/>
-                        <outlet property="toolbar" destination="bcB-rL-Hzf" id="r7w-hg-ZPT"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="2099" y="29"/>
-        </scene>
     </scenes>
     <classes>
         <class className="CaptureDetailViewController" superclassName="UIViewController">
@@ -262,13 +224,6 @@
         </class>
         <class className="CapturesTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CapturesTableViewController.h"/>
-        </class>
-        <class className="PlaybackViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlaybackViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
-            </relationships>
         </class>
         <class className="RootViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
